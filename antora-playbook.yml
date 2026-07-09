@@ -1,0 +1,22 @@
+site:
+  title: Notification Hub Docs
+  start_page: notification-hub::index.adoc
+  url: http://localhost:5000
+
+content:
+  sources:
+    - url: ../notification-hub-service
+      branches: HEAD
+      start_path: docs/hub
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+output:
+  dir: build/site
+
+runtime:
+  fetch: true
+

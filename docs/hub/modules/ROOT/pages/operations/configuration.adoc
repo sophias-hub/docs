@@ -1,0 +1,14 @@
+= Operations: Configuration
+
+== Local defaults
+
+* API base URL: `http://localhost:3000`
+* Swagger UI (local): `http://localhost:8080/docs`
+
+== Authentication
+
+* Header: `X-API-Key`
+* Demo key: `secure-token-123`
+
+NOTE: For production hosting, the API key should be read from an environment variable (for example, `API_KEY`) and never hardcoded.
+

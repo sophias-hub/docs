@@ -1,0 +1,17 @@
+= Notification Hub documentation
+
+Welcome. This site is the documentation hub for the Notification Hub portfolio project.
+
+== What you can do here
+
+* Follow a tutorial to send your first notification.
+* Use task-oriented how-tos for common integration steps.
+* Jump to reference docs for the API (OpenAPI/Swagger UI) and SDK (TypeDoc).
+
+== Quick links
+
+* xref:tutorials/first-notification.adoc[Send your first notification]
+* xref:how-to/authentication.adoc[Authenticate requests]
+* xref:reference/api.adoc[API reference]
+* xref:reference/sdk.adoc[SDK reference]
+

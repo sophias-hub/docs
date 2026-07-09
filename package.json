@@ -1,0 +1,13 @@
+{
+  "name": "notification-hub-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:build": "antora antora-playbook.yml"
+  },
+  "devDependencies": {
+    "@antora/cli": "^3.1.10",
+    "@antora/site-generator-default": "^3.1.10"
+  }
+}
+
