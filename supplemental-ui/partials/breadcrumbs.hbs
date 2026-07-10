@@ -1,0 +1,23 @@
+<nav class="breadcrumbs adt-breadcrumbs" aria-label="Breadcrumb">
+  <ul>
+    <li class="adt-breadcrumb-trail">
+      {{#with site.homeUrl}}
+      <a class="adt-breadcrumb-trail-link" href="{{{relativize this}}}">Home</a>
+      {{else}}
+      <a class="adt-breadcrumb-trail-link" href="{{{relativize page.componentVersion.url}}}">Home</a>
+      {{/with}}
+    </li>
+    {{#if page.breadcrumbs}}
+    {{#each page.breadcrumbs}}
+    <li class="adt-breadcrumb-trail{{#if @last}} adt-breadcrumb-trail--current{{/if}}">
+    {{~#if (and ./url (eq ./urlType 'internal'))~}}
+    <a class="adt-breadcrumb-trail-link" href="{{{relativize ./url}}}">{{{./content}}}</a>
+    {{~else~}}
+    <span class="adt-breadcrumb-trail-text">{{{./content}}}</span>
+    {{~/if~}}
+    </li>
+    {{/each}}
+    {{/if}}
+  {{> edit-breadcrumb}}
+  </ul>
+</nav>

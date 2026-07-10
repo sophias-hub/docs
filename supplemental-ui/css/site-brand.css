@@ -1,0 +1,8 @@
+/* Push Edit to the right end of the breadcrumb mast row. */
+.adt-breadcrumbs > ul {
+  flex-wrap: nowrap;
+}
+
+.adt-breadcrumbs > ul > .adt-breadcrumb-edit {
+  margin-left: auto;
+}
