@@ -1,6 +1,6 @@
 site:
   title: Notification Hub Docs
-  start_page: notification-hub::index.adoc
+  start_page: ROOT::index.adoc
   url: https://sophias-hub.github.io/docs
 
 content:

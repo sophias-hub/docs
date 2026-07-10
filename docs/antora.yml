@@ -1,5 +1,5 @@
-name: notification-hub
+name: ROOT
 title: Notification Hub
-version: latest
+version: ~
 nav:
   - modules/ROOT/nav.adoc
