@@ -12,6 +12,8 @@ Welcome. This site is the documentation hub for the Notification Hub portfolio p
 
 * xref:tutorials/first-notification.adoc[Send your first notification]
 * xref:how-to/authentication.adoc[Authenticate requests]
-* xref:reference/api.adoc[API reference]
-* xref:reference/sdk.adoc[SDK reference]
+* API reference (Swagger UI): https://sophias-hub.github.io/docs-api/
+* SDK reference (TypeDoc): https://sophias-hub.github.io/docs-sdk/
+* xref:reference/api.adoc[API reference (hub page)]
+* xref:reference/sdk.adoc[SDK reference (hub page)]
 

@@ -1,0 +1,126 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare local bin
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Cache Vale styles
+        uses: actions/cache@v4
+        with:
+          path: .vale/styles
+          key: vale-styles-${{ hashFiles('.vale.ini') }}
+
+      - name: Cache Vale
+        id: vale-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/vale
+          key: vale-3.15.1-${{ runner.os }}
+
+      - name: Install Vale
+        if: steps.vale-cache.outputs.cache-hit != 'true'
+        run: |
+          VALE_VERSION=3.15.1
+          curl -sfL -o vale.tar.gz \
+            "https://github.com/vale-cli/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz"
+          tar -xzf vale.tar.gz vale
+          mv vale "$HOME/.local/bin/vale"
+          chmod +x "$HOME/.local/bin/vale"
+          rm vale.tar.gz
+
+      - name: Verify Vale
+        run: |
+          test -x "$HOME/.local/bin/vale"
+          vale --version
+
+      - name: Install Asciidoctor
+        run: sudo gem install asciidoctor
+
+      - name: Verify Asciidoctor
+        run: asciidoctor --version
+
+      - name: Cache Lychee
+        id: lychee-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/lychee
+          key: lychee-0.18.1-${{ runner.os }}
+
+      - name: Install Lychee
+        if: steps.lychee-cache.outputs.cache-hit != 'true'
+        run: |
+          LYCHEE_VERSION=0.18.1
+          curl -sfL -o lychee.tar.gz \
+            "https://github.com/lycheeverse/lychee/releases/download/lychee-v${LYCHEE_VERSION}/lychee-x86_64-unknown-linux-gnu.tar.gz"
+          tar -xzf lychee.tar.gz
+          mv lychee "$HOME/.local/bin/lychee"
+          chmod +x "$HOME/.local/bin/lychee"
+          rm lychee.tar.gz
+
+      - name: Verify Lychee
+        run: lychee --version
+
+      - name: Run validation
+        run: bash scripts/validate.sh
+
+  build:
+    name: Build Antora site
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm run docs:build
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: antora-site
+          path: build/site
+
+  publish:
+    name: Publish docs hub
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: [validate, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: antora-site
+          path: build/site
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/site
+          destination_dir: .
+          keep_files: false

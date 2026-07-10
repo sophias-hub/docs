@@ -1,13 +1,13 @@
 site:
   title: Notification Hub Docs
   start_page: notification-hub::index.adoc
-  url: http://localhost:5000
+  url: https://sophias-hub.github.io/docs
 
 content:
   sources:
-    - url: ../notification-hub-service
+    - url: .
       branches: HEAD
-      start_path: docs/hub
+      start_path: docs
 
 ui:
   bundle:
@@ -19,4 +19,5 @@ output:
 
 runtime:
   fetch: true
-
+  log:
+    failure_level: warn

@@ -1,0 +1,30 @@
+= Reference: API
+
+The live API reference is a published Swagger UI site generated from OpenAPI in `notification-hub-service`.
+
+== Published reference
+
+* API reference (Swagger UI): https://sophias-hub.github.io/docs-api/
+
+Use *Authorize* with API key `secure-token-123`, then *Try it out* against the public mock API.
+
+== What it covers
+
+* Endpoints, headers, and request/response schemas
+* Interactive calls against the deployed mock service
+
+== Local preview
+
+From `notification-hub-service`:
+
+[source,bash]
+----
+npm run docs:api
+----
+
+Swagger UI is available at `http://localhost:8080/docs` when the local docs server is running.
+
+== Source of truth
+
+* Generated OpenAPI: `notification-hub-service/docs/api/swagger.json` (from `tsoa spec`)
+* Published on every successful `main` CI run into the `docs-api` GitHub Pages repo

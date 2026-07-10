@@ -1,9 +1,14 @@
 {
-  "name": "notification-hub-docs",
+  "name": "docs",
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:build": "antora antora-playbook.yml"
+    "docs:build": "antora antora-playbook.yml",
+    "validate": "bash scripts/validate.sh"
+  },
+  "scriptsComments": {
+    "docs:build": "Build the Antora hub into build/site/",
+    "validate": "Lint AsciiDoc prose (Vale) and check links (Lychee)"
   },
   "devDependencies": {
     "@antora/cli": "^3.1.10",

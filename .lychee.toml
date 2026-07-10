@@ -1,0 +1,13 @@
+# Link checker for AsciiDoc in the Antora hub.
+exclude_path = [
+  ".git",
+  "node_modules",
+  "build",
+  ".vale",
+]
+
+# Local / placeholder URLs in examples.
+exclude = [
+  '^http://localhost',
+  '^https://localhost',
+]
