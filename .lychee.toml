@@ -7,7 +7,9 @@ exclude_path = [
 ]
 
 # Local / placeholder URLs in examples.
+# SDK language subpaths excluded until first service-repo publish of the new layout.
 exclude = [
   '^http://localhost',
   '^https://localhost',
+  '^https://sophias-hub\.github\.io/docs-sdk/(typescript|java|python)/?',
 ]
