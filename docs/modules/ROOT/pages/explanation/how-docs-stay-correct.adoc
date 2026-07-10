@@ -23,6 +23,7 @@ On push to `main` only:
 
 * Publish SDK docs to https://sophias-hub.github.io/docs-sdk/
 * Publish API docs to https://sophias-hub.github.io/docs-api/
+* Run the *Docs hub agent* workflow: classify the code change with Diátaxis, update the matching AsciiDoc page(s) in this hub via Gemini, and open a pull request labeled `generated-docs` (no auto-merge)
 
 Interactive Swagger Try it out uses the public mock API URL from the `PUBLIC_API_URL` GitHub Actions variable.
 
@@ -36,6 +37,7 @@ Published API and SDK reference docs are *latest-only*.
 
 == AI/agent policy
 
-* Agents may propose updates via pull requests with reviewable diffs
-* Human-authored guides in this hub should be reviewed before merge
-* Generated reference sites update automatically from `main` when CI passes
+* On service `main` code merges, an automated agent proposes hub updates via pull requests with reviewable diffs
+* The agent picks Diátaxis pages (tutorial / how-to / reference / explanation / operations) from the change, then edits those files only
+* Human-authored guides in this hub must be reviewed before merge (PRs are labeled `generated-docs`; no auto-merge)
+* Generated reference sites (`docs-sdk`, `docs-api`) still update automatically from `main` when CI passes
