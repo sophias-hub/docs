@@ -1,0 +1,29 @@
+= Send
+:description: How to send a Notification Hub notification when template and preferences are ready.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to send a notification with a {gt-template} and allowed {gt-preferences}.
+
+include::ROOT:partial$mock-service-note.adoc[]
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+* You have a {gt-recipient} identifier, a {gt-channel}, and an existing template `id`
+* Preferences allow that channel for the Recipient
+
+== Limitations
+
+* To keep the service stable, limit sends to **10** or fewer per **60 seconds**.
+* Match `channel` to the template channel and an allowed preference.
+
+== Send a notification
+
+. Open the _Send_ endpoint below.
+. Fill in the request following the example request payload or schema.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=send]
++
+. Click *Try* and *Execute*.
+. See the endpoint response and copy the `recordId`.

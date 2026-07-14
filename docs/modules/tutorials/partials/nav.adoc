@@ -1,0 +1,5 @@
+* xref:tutorials:index.adoc[Tutorials]
+** xref:tutorials:first-notification/first-notification.adoc[Send your first notification]
+*** xref:tutorials:first-notification/create-template.adoc[Create a template]
+*** xref:tutorials:first-notification/set-channel-preference.adoc[Set a channel preference]
+*** xref:tutorials:first-notification/send-notification.adoc[Send a notification]

@@ -1,19 +1,68 @@
-= Notification Hub documentation
+= Notification Hub Documentation
+:description: Start here for what Notification Hub is, how it works, and which guide to open next.
 
-Welcome. This site is the documentation hub for the Notification Hub portfolio project.
+include::glossary:partial$attributes.adoc[]
 
-== What you can do here
+{gt-notification-hub} is a dispatch service your application calls when it needs to notify a person. A {gt-sender} asks it to deliver a message to a {gt-recipient} on email, SMS, or push—for example after signup, for a one-time password, or when a payment succeeds.
 
-* Follow a tutorial to send your first notification.
-* Use task-oriented how-tos for common integration steps.
-* Jump to reference docs for the API (OpenAPI/Swagger UI) and SDK (TypeDoc).
+TIP: Hover a dotted term for a short definition, or open the xref:glossary:index.adoc[menu:Glossary[]] for full terms.
 
-== Quick links
+== Browse
 
-* xref:tutorials/first-notification.adoc[Send your first notification]
-* xref:how-to/authentication.adoc[Authenticate requests]
-* API reference (Swagger UI): https://sophias-hub.github.io/docs-api/
-* SDK reference (TypeDoc): https://sophias-hub.github.io/docs-sdk/
-* xref:reference/api.adoc[API reference (hub page)]
-* xref:reference/sdk.adoc[SDK reference (hub page)]
+[.doc-module-tiles]
+====
+
+[.doc-module-tile]
+======
+[.tile-kicker]#Tutorials#
+
+Guided path to one successful send: xref:tutorials:first-notification/first-notification.adoc[Send your first notification].
+
+xref:tutorials:first-notification/create-template.adoc[Create a template] · xref:tutorials:first-notification/set-channel-preference.adoc[Set a channel preference] · xref:tutorials:first-notification/send-notification.adoc[Send a notification]
+======
+
+[.doc-module-tile]
+======
+[.tile-kicker]#How-to#
+
+Task pages you reopen when you need a specific job done.
+
+xref:how-to:templates/create.adoc[Create] · xref:how-to:preferences/set.adoc[Set channel preferences] · xref:how-to:notifications/send.adoc[Send]
+======
+
+[.doc-module-tile]
+======
+[.tile-kicker]#Explanations#
+
+Product concepts: notifications, templates, channels, and delivery.
+
+xref:explanations:index.adoc[Explanations]
+======
+
+[.doc-module-tile]
+======
+[.tile-kicker]#Reference#
+
+Pointers to the live API and SDK sites (contracts and clients).
+
+xref:reference:index.adoc[Reference]
+======
+
+[.doc-module-tile]
+======
+[.tile-kicker]#Glossary#
+
+Short definitions for Sender, template, channel, record, and more.
+
+xref:glossary:index.adoc[Glossary]
+======
+
+====
+
+=== Recommended reading path
+
+. Learn about the Notification Hub service in xref:explanations:notifications.adoc[menu:Explanations[]]
+. Complete the xref:tutorials:first-notification/first-notification.adoc[menu:Tutorials[Send your first notification]]
+. Reuse xref:how-to:index.adoc[menu:How-to Guides[]] to complete tasks as needed
+. Check xref:reference:index.adoc[menu:References[]] for API and SDK pointers
 

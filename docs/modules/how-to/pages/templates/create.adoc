@@ -1,0 +1,20 @@
+= Create a template
+:description: How to add a reusable notification template to the Notification Hub catalog.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to add a reusable notification {gt-template} to the catalog.
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+
+== Create a template
+
+. Open the _Create template_ endpoint below.
+. Fill in the request following the example request payload or schema.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-create]
++
+. Click *Try* and *Execute*.
+. See the endpoint response to verify successful template creation.

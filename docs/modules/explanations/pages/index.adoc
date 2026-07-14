@@ -1,0 +1,6 @@
+= Explanations
+:description: Product concepts for Notification Hub—start here to choose which explanation to read.
+
+include::glossary:partial$attributes.adoc[]
+
+Explanation pages describe how {gt-notification-hub} works, giving you a mental model of the product—notifications, templates, channels, preferences, consent, and delivery—without step-by-step try-it-out instructions.

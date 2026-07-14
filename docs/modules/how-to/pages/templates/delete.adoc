@@ -1,0 +1,25 @@
+= Delete a template
+:description: How to delete a template from the Notification Hub catalog.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to delete a {gt-template} from the Notification Hub catalog.
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+* You have the `id` of a template you want to delete
+
+== Limitations
+
+* You can only delete a template when no delivery {gt-record} still references it.
+
+== Delete a template
+
+. Open the _Delete template_ endpoint below.
+. Fill in the path with the `id` of the template you want to delete.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-delete]
++
+. Click *Try* and *Execute*.
+. See the endpoint response to verify successful template deletion.

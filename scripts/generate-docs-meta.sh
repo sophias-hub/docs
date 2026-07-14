@@ -25,4 +25,4 @@ cat > "$OUTPUT" <<EOF
 }
 EOF
 
-echo "Wrote docs hub provenance metadata to ${OUTPUT}"
+echo "📦 Wrote docs hub provenance metadata to ${OUTPUT}"

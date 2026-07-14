@@ -1,0 +1,29 @@
+= Retrieve a template
+:description: How to fetch one Notification Hub template by id or list the catalog.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to fetch one {gt-template} by `id`, or list every template in the catalog.
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+
+== Retrieve a specific template
+
+. Open the _Retrieve template_ endpoint below.
+. Fill in the path with the `id` of the template you want to retrieve.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-get]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with the specific template.
+
+== Retrieve all templates
+
+. Open the _List templates_ endpoint below.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-list]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with all templates.

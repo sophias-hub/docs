@@ -6,3 +6,345 @@
 .adt-breadcrumbs > ul > .adt-breadcrumb-edit {
   margin-left: auto;
 }
+
+/* Brand header mark */
+.adt-header-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/*
+ * Admonition backgrounds by type.
+ * Do not set overflow:hidden on the table — the UI floats the label
+ * above the box (translateY -50%), and overflow clips that badge.
+ */
+.doc .admonitionblock {
+  margin-top: 1.75rem;
+}
+
+.doc .admonitionblock td.content {
+  border-radius: 0.5rem;
+}
+
+.doc .admonitionblock.note td.content {
+  background: #e8f1fc;
+  border-left: 4px solid #217ee7;
+}
+
+.doc .admonitionblock.tip td.content {
+  background: #e8f6e9;
+  border-left: 4px solid #41af46;
+}
+
+.doc .admonitionblock.important td.content {
+  background: #fdecea;
+  border-left: 4px solid #d32f2f;
+}
+
+.doc .admonitionblock.warning td.content {
+  background: #fff3e0;
+  border-left: 4px solid #e18114;
+}
+
+.doc .admonitionblock.caution td.content {
+  background: #f3e5f5;
+  border-left: 4px solid #a0439c;
+}
+
+/* Admonition backgrounds by type (dark) */
+html.dark-theme .doc .admonitionblock.note td.content {
+  background: rgba(33, 126, 231, 0.18);
+  border-left-color: #5b9ef0;
+}
+
+html.dark-theme .doc .admonitionblock.tip td.content {
+  background: rgba(65, 175, 70, 0.18);
+  border-left-color: #6bc46f;
+}
+
+html.dark-theme .doc .admonitionblock.important td.content {
+  background: rgba(211, 47, 47, 0.2);
+  border-left-color: #ef5350;
+}
+
+html.dark-theme .doc .admonitionblock.warning td.content {
+  background: rgba(225, 129, 20, 0.2);
+  border-left-color: #ffa726;
+}
+
+html.dark-theme .doc .admonitionblock.caution td.content {
+  background: rgba(160, 67, 156, 0.2);
+  border-left-color: #ce93d8;
+}
+
+/* Start-here doc module tiles */
+.doc .doc-module-tiles {
+  margin: 1.25rem 0 1.75rem;
+}
+
+.doc .doc-module-tiles > .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.doc .doc-module-tiles > .content > .doc-module-tile {
+  margin: 0;
+}
+
+.doc .doc-module-tile > .content {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem 1.1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.65rem;
+  border-top: 3px solid #0d9488;
+  box-shadow: none;
+}
+
+.doc .doc-module-tile .tile-kicker {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #0f766e;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.doc .doc-module-tile > .content > .paragraph:last-child {
+  margin-bottom: 0;
+}
+
+html.dark-theme .doc .doc-module-tile > .content {
+  background: #1f2125;
+  border-color: #373a40;
+  border-top-color: #2dd4bf;
+}
+
+html.dark-theme .doc .doc-module-tile .tile-kicker {
+  color: #5eead4;
+}
+
+/* Inline Mermaid diagrams — container chrome */
+.doc .mermaid {
+  margin: 1.25rem 0;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.65rem;
+}
+
+/* Center diagrams when the Mermaid block sets an explicit width (e.g. width=60%). */
+.doc .imageblock > .mermaid[style*="width"] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doc .mermaid svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.doc .mermaid.mermaid-zoomable {
+  cursor: zoom-in;
+}
+
+.doc .mermaid.mermaid-zoomable:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 2px;
+}
+
+html.dark-theme .doc .mermaid {
+  background: #1f2125;
+  border-color: #373a40;
+}
+
+html.dark-theme .doc .mermaid.mermaid-zoomable:focus-visible {
+  outline-color: #5eead4;
+}
+
+/* Mermaid click-to-zoom lightbox */
+html.is-clipped--mermaid-zoom {
+  overflow: hidden;
+}
+
+.mermaid-zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(15, 23, 42, 0.72);
+  cursor: zoom-out;
+}
+
+.mermaid-zoom-stage {
+  max-width: min(96vw, 72rem);
+  max-height: 90vh;
+  overflow: visible;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.35);
+  cursor: grab;
+  transform-origin: center center;
+  touch-action: none;
+}
+
+.mermaid-zoom-stage.is-dragging {
+  cursor: grabbing;
+}
+
+.mermaid-zoom-svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.mermaid-zoom-hint {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  font: 0.8125rem/1.35 "Source Sans 3", system-ui, sans-serif;
+  pointer-events: none;
+}
+
+.mermaid-zoom-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  margin: 0;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(248, 250, 252, 0.35);
+  border-radius: 0.4rem;
+  background: rgba(15, 23, 42, 0.82);
+  color: #f8fafc;
+  font: 0.8125rem/1.35 "Source Sans 3", system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.mermaid-zoom-close:hover,
+.mermaid-zoom-close:focus-visible {
+  background: #0f172a;
+  outline: none;
+}
+
+html.dark-theme .mermaid-zoom-stage {
+  background: #1f2125;
+  border-color: #373a40;
+}
+
+/* Legacy inline-SVG wrapper (if any remain) */
+.doc .diagram-svg {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.doc .diagram-svg svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* Glossary hover terms: label in text, definition in popup */
+.doc abbr.glossary-term {
+  position: relative;
+  text-decoration: underline dotted;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+
+.doc abbr.glossary-term:hover::after,
+.doc abbr.glossary-term:focus-visible::after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 0.35rem);
+  z-index: 20;
+  width: max-content;
+  max-width: min(22rem, 70vw);
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.35rem;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 1.35;
+  text-decoration: none;
+  white-space: normal;
+  box-shadow: 0 0.35rem 1rem rgb(15 23 42 / 25%);
+  pointer-events: none;
+}
+
+html.dark-theme .doc abbr.glossary-term {
+  text-decoration-color: #94a3b8;
+}
+
+html.dark-theme .doc abbr.glossary-term:hover::after,
+html.dark-theme .doc abbr.glossary-term:focus-visible::after {
+  background: #f1f5f9;
+  color: #0f172a;
+  box-shadow: 0 0.35rem 1rem rgb(0 0 0 / 45%);
+}
+
+/*
+ * Dark theme nav expand carets.
+ * site-extra.css uses mask-image + background-color; when the SVG mask fails to
+ * apply, background-image is already cleared and the arrow disappears. Prefer the
+ * original caret asset inverted to light so expand/collapse stays visible.
+ */
+html.dark-theme .nav-item-toggle {
+  background: transparent url(../img/caret.svg) no-repeat 50% / 50% !important;
+  background-color: transparent !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  filter: brightness(0) invert(1) !important;
+  opacity: 0.85;
+}
+
+/*
+ * Dark theme in-article links.
+ * site-extra paints .menuseq/.menu as body gray, so menu: xrefs blend into prose.
+ * Force a distinct accent on .doc links (and restore nested menu chrome).
+ */
+html.dark-theme .doc a,
+html.dark-theme nav.pagination a {
+  color: #5eead4;
+}
+
+html.dark-theme .doc a:hover,
+html.dark-theme .doc a:focus,
+html.dark-theme nav.pagination a:hover,
+html.dark-theme nav.pagination a:focus {
+  color: #99f6e4;
+}
+
+html.dark-theme .doc a .menuseq,
+html.dark-theme .doc a .menu,
+html.dark-theme .doc a .menuitem,
+html.dark-theme .doc a .caret {
+  color: inherit;
+}

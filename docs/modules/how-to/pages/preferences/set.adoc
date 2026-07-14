@@ -1,0 +1,22 @@
+= Set channel preferences
+:description: How to allow or block email, SMS, and push for a Notification Hub recipient.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to allow or block each {gt-channel} for a {gt-recipient}.
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+* You have the {gt-recipient} identifier
+
+== Set channel preferences
+
+. Open the _Set channel preferences_ endpoint below.
+. Fill in the path with the {gt-recipient} identifier.
+. Fill in the request body following the example request payload or schema.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=preferences-put]
++
+. Click *Try* and *Execute*.
+. See the endpoint response to verify the channel flags you set.

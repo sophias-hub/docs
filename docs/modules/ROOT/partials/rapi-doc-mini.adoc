@@ -1,0 +1,182 @@
+// Tagged RapiDoc Mini embeds. Include one tag per operation, for example:
+// include::partial$rapi-doc-mini.adoc[tag=send]
+
+// tag::templates-list[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="GET /api/v1/templates"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::templates-list[]
+
+// tag::templates-create[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="POST /api/v1/templates"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::templates-create[]
+
+// tag::templates-get[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="GET /api/v1/templates/{id}"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::templates-get[]
+
+// tag::templates-patch[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="PATCH /api/v1/templates/{id}"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::templates-patch[]
+
+// tag::templates-delete[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="DELETE /api/v1/templates/{id}"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::templates-delete[]
+
+// tag::preferences-put[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="PUT /api/v1/preferences/{recipient}"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::preferences-put[]
+
+// tag::unsubscribe[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="POST /api/v1/unsubscribe"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::unsubscribe[]
+
+// tag::send[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="POST /api/v1/send"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::send[]
+
+// tag::records-get[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="GET /api/v1/records/{recordId}"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::records-get[]
+
+// tag::records-list[]
+++++
+<rapi-doc-mini
+  spec-url="https://sophias-hub.github.io/docs-api/swagger.json"
+  match-paths="GET /api/v1/records"
+  theme="light"
+  layout="column"
+  paths-expanded="false"
+  allow-try="true"
+  api-key-name="X-API-Key"
+  api-key-location="header"
+  api-key-value="secure-token-123"
+  style="width: 100%; border: 1px solid #cbd5e1; border-radius: 8px;"
+></rapi-doc-mini>
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+++++
+// end::records-list[]

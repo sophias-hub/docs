@@ -1,0 +1,41 @@
+= Notifications
+:description: Explain what a notification is in Notification Hub and why the hub sits between Sender and Recipient.
+
+include::glossary:partial$attributes.adoc[]
+
+A {gt-notification} is the message a {gt-sender} asks {gt-notification-hub} to deliver to a {gt-recipient} on a selected {gt-channel}.
+
+Instead of owning reusable xref:explanations:templates.adoc[templates], per-Recipient xref:explanations:channels.adoc#preferences[preferences], send acceptance, and delivery records, a Sender delegates these tasks to Notification Hub.
+
+include::ROOT:partial$mock-service-note.adoc[]
+
+== Notification lifecycle
+
+[mermaid, width=60%]
+....
+flowchart TD
+  Start((Start)) --> Send["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;sends a notification"]
+  Send --> Check{"🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;Are the template and preferences compatible?"}
+  Check -->|Yes| Accept["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;accepts the send"]
+  Accept --> Record["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;creates a delivery record"]
+  Record --> Channel["📡 &lt;b&gt;Channel&lt;/b&gt;&lt;br/&gt;delivers on Recipient's email, SMS, or push"]
+  Channel --> Recipient["👤 &lt;b&gt;Recipient&lt;/b&gt;&lt;br/&gt;receives the notification"]
+  Check -->|No| Block["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;blocks the send"]
+  Recipient --> End((End))
+  Block --> End
+....
+
+The Sender sends a request that names a {gt-template}, a Recipient, and a channel.
+Notification Hub checks that the template exists, that the send uses that template's channel, and that preferences allow the channel for the Recipient. Depending on the results, the following happens:
+
+* If the checks _pass_, Notification Hub accepts the send, creates a delivery {gt-record}, and a channel carries the message to the Recipient.
+* If the checks _fail_—for example the template is missing, the channel doesn't match the template, or preferences block that channel—Notification Hub rejects the send.
++
+No delivery record is created, the notification is not delivered on a channel, and the Sender receives an error response instead of a record identifier.
+See link:{url-api-docs}[menu:Reference[API reference]^] for error response shapes.
+
+== Related
+
+* xref:explanations:delivery-records.adoc[menu:Explanations[Delivery records]]
+* xref:how-to:notifications/send.adoc[menu:How-to[Send a notification]]
+* xref:how-to:notifications/retrieve-record.adoc[menu:How-to[Retrieve a delivery record]]

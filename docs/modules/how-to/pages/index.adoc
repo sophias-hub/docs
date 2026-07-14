@@ -1,0 +1,24 @@
+= How-to
+:description: How-to guides for Notification Hub—open one when you need a specific job done.
+
+include::glossary:partial$attributes.adoc[]
+
+How-to guides answer “how do I …?” for one job at a time.
+
+Use this module when you are already familiar with the Notification Hub service and need the shortest successful path for managing templates and preferences, or sending and tracking notifications.
+
+== Guides in this module
+
+Templates::
+xref:how-to:templates/create.adoc[Create] ·
+xref:how-to:templates/retrieve.adoc[Retrieve] ·
+xref:how-to:templates/update.adoc[Update] ·
+xref:how-to:templates/delete.adoc[Delete]
+
+Preferences::
+xref:how-to:preferences/set.adoc[Set channel preferences] ·
+xref:how-to:preferences/unsubscribe.adoc[Unsubscribe from a channel]
+
+Notifications::
+xref:how-to:notifications/send.adoc[Send] ·
+xref:how-to:notifications/retrieve-record.adoc[Retrieve record]

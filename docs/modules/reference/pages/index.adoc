@@ -1,0 +1,17 @@
+= Reference
+:description: Links from this hub to the Notification Hub API and SDK documentation sites.
+
+This module points to the live API contract and client docs. Click the links to proceed to the documentation you need.
+
+|===
+|Reference |Description
+
+|{url-api-docs}[API reference^]
+|OpenAPI / Swagger documentation for authentication, request and response schemas, status payloads, and try-it-out against the mock API.
+
+|{url-sdk-docs}[SDK reference^]
+|Index of generated client docs for TypeScript (TypeDoc), Java (Javadoc), and Python (pdoc). The documentation includes guidelines for installation and constructing the client.
+
+|{url-service-changelog}[Service changelog^]
+|The history of Notification Hub product changes.
+|===
