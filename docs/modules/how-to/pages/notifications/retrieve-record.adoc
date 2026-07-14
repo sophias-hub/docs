@@ -1,0 +1,37 @@
+= Retrieve a delivery record
+:description: How to look up Notification Hub delivery records.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to fetch one delivery {gt-record} by `recordId`, or list records for a {gt-recipient}.
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+
+== Retrieve a specific record
+
+. Open the _Retrieve record_ endpoint below.
+. Fill in the path with the `recordId` you want to retrieve.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=records-get]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with the specific record.
+
+NOTE: In this mock, a successful send is stored as `delivered` immediately.
+
+== Retrieve records for a recipient
+
+. Open the _List records_ endpoint below.
+. Fill in the query with the {gt-recipient} identifier.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=records-list]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with the matching records.
+
+== Related
+
+* xref:how-to:notifications/send.adoc[menu:How-to Guides[Send a notification]]
+* xref:explanations:delivery-records.adoc[menu:Explanations[Delivery records]]

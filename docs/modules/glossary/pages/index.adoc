@@ -1,0 +1,24 @@
+= Glossary
+:description: Definitions of Notification Hub terms used across these guides.
+
+include::partial$attributes.adoc[]
+
+The glossary lists full definitions of terms used across the Notification Hub documentation.
+
+include::partial$terms.adoc[tag=channel]
+
+include::partial$terms.adoc[tag=delivery-status]
+
+include::partial$terms.adoc[tag=notification]
+
+include::partial$terms.adoc[tag=notification-hub]
+
+include::partial$terms.adoc[tag=preferences]
+
+include::partial$terms.adoc[tag=recipient]
+
+include::partial$terms.adoc[tag=record]
+
+include::partial$terms.adoc[tag=sender]
+
+include::partial$terms.adoc[tag=template]

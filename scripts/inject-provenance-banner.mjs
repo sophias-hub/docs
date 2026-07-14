@@ -91,12 +91,12 @@ function main() {
   const metaPath = path.join(resolvedSiteDir, 'meta.json');
 
   if (!fs.existsSync(resolvedSiteDir)) {
-    console.error(`Site directory not found: ${resolvedSiteDir}`);
+    console.error(`❌ Site directory not found: ${resolvedSiteDir}`);
     process.exit(1);
   }
   if (!fs.existsSync(metaPath)) {
-    console.error(`Missing meta.json at ${metaPath}`);
-    console.error('Run scripts/generate-docs-meta.sh first.');
+    console.error(`❌ Missing meta.json at ${metaPath}`);
+    console.error('💡 Run scripts/generate-docs-meta.sh first.');
     process.exit(1);
   }
 
@@ -105,7 +105,7 @@ function main() {
   const htmlFiles = collectHtmlFiles(resolvedSiteDir);
 
   if (htmlFiles.length === 0) {
-    console.error(`No HTML files found in ${resolvedSiteDir}`);
+    console.error(`❌ No HTML files found in ${resolvedSiteDir}`);
     process.exit(1);
   }
 
@@ -115,7 +115,7 @@ function main() {
   }
 
   console.log(
-    `Injected provenance banner into ${htmlFiles.length} HTML file(s) in ${resolvedSiteDir}`,
+    `🏷️ Injected provenance banner into ${htmlFiles.length} HTML file(s) in ${resolvedSiteDir}`,
   );
 }
 

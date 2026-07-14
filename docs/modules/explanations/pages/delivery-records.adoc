@@ -1,0 +1,64 @@
+= Delivery records
+:description: Explain how Notification Hub accepts a send, creates a record, and moves through delivery statuses.
+
+include::glossary:partial$attributes.adoc[]
+
+A delivery record is the tracking object returned when a xref:explanations:notifications.adoc[notification] send is accepted.
+
+Each record carries a {gt-delivery-status} so the {gt-sender} can see how far the channel's delivery has gone.
+
+include::ROOT:partial$mock-service-note.adoc[]
+
+[[delivery-status]]
+== Delivery status
+
+A delivery status is a lifecycle value on a sent notification record.
+There are three possible values:
+
+|===
+| Status | Meaning
+
+| `queued`
+| The notification is waiting to be delivered on the channel.
+
+| `delivered`
+| The channel delivered the notification to the Recipient.
+
+| `failed`
+| The channel failed to deliver the notification to the Recipient.
+|===
+
+NOTE: A delivery record with a `failed` status includes error details in the response body. See link:{url-api-docs}[API reference^] for more information on possible errors during delivery.
+
+== Delivery status transitions
+
+[mermaid, width=60%]
+....
+flowchart TD
+  Start((Start)) --> Send["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;sends a notification"]
+  Send --> Check{"🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;Are the template and preferences compatible?"}
+  Check -->|No| Block["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;blocks the send"]
+  Check -->|Yes| Queued["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;creates a `queued` record"]
+  Queued --> Attempt["📡 &lt;b&gt;Channel&lt;/b&gt;&lt;br/&gt;attempts delivery"]
+  Attempt --> Outcome{"🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;Did channel delivery succeed?"}
+  Outcome -->|Yes| Delivered["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;sets the record status to `delivered`"]
+  Outcome -->|No| Failed["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;sets the record status to `failed`"]
+  Block --> End((End))
+  Delivered --> End
+  Failed --> End
+....
+
+Depending on the checks and channel outcome:
+
+* If template or xref:explanations:channels.adoc#preferences[preferences] checks _fail_, Notification Hub blocks the send. No delivery record is created.
+* If the checks _pass_, Notification Hub creates a record as `queued`, then the channel attempts delivery.
+** On success, the record status becomes `delivered`.
+** On failure, the record status becomes `failed`.
+
+WARNING: To keep the service stable, the limit of **10** sends per **60 seconds** must not be exceeded.
+
+== Related
+
+* xref:explanations:notifications.adoc[menu:Explanations[Notifications]]
+* xref:how-to:notifications/send.adoc[menu:How-to Guides[Send a notification]]
+* xref:how-to:notifications/retrieve-record.adoc[menu:How-to Guides[Retrieve a delivery record]]

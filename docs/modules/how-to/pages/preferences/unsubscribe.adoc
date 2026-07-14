@@ -1,0 +1,26 @@
+= Unsubscribe from a channel
+:description: How to opt a recipient out of one Notification Hub channel.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to opt a {gt-recipient} out of one {gt-channel}.
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+* You have the {gt-recipient} identifier and the {gt-channel} to block
+
+== Unsubscribe from a channel
+
+. Open the _Unsubscribe_ endpoint below.
+. Fill in the request following the example request payload or schema.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=unsubscribe]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with that channel set to `false`.
+
+== Related
+
+* xref:how-to:preferences/set.adoc[menu:How-to Guides[Set channel preferences]]
+* xref:explanations:channels.adoc[menu:Explanations[Channels]]

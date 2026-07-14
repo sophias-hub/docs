@@ -1,0 +1,22 @@
+= Tutorials
+:description: Guided learning paths for Notification Hub—start here when you want one complete first success.
+
+include::glossary:partial$attributes.adoc[]
+
+Tutorials guide you through a full path to a successful task completion.
+
+Use this module when you are new to {gt-notification-hub} to learn how to use the Notification Hub service.
+
+== Tutorials in this module
+
+. xref:tutorials:first-notification/first-notification.adoc[menu:Tutorials[Send your first notification]]
+
+== Next step
+
+Proceed to the xref:tutorials:first-notification/first-notification.adoc[Send your first notification] tutorial to send your first notification.
+
+== Related
+
+* xref:ROOT:index.adoc[menu:Start here[]]
+* xref:explanations:index.adoc[menu:Explanations[]]
+* xref:how-to:index.adoc[menu:How-to Guides[]]

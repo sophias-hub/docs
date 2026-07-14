@@ -1,0 +1,28 @@
+// Glossary term definitions (single source of truth).
+// Include once per page: include::glossary:partial$attributes.adoc[]
+// Then mark terms inline with short particles: {gt-sender}, {gt-template}, …
+// (Particles expand to hoverable <abbr> using the definitions below.)
+// Explanations: plain text for the page subject in its definition sentence; then {gt-*}.
+// How-tos / tutorials: use {gt-*} from the lead (including the page subject).
+// Keep both blocks sorted A–Z by term key.
+// Display casing: lowercase for common terms; capitalize role/product names only.
+
+:glossary-def-channel: A delivery path Notification Hub can use to deliver a notification to a Recipient.
+:glossary-def-delivery-status: A lifecycle value on a sent notification record, showing whether it is queued, delivered, or failed.
+:glossary-def-notification: The message a Sender asks Notification Hub to deliver to a Recipient on a channel.
+:glossary-def-notification-hub: The notification dispatch service that stores templates and preferences, accepts sends, and creates delivery records.
+:glossary-def-preferences: Per-Recipient flags that allow or block sending notifications to each channel.
+:glossary-def-recipient: The person Notification Hub notifies on a channel.
+:glossary-def-record: The notification delivery tracking object returned when a send is accepted.
+:glossary-def-sender: The application that manages templates and preferences, sends notifications, and looks up delivery records.
+:glossary-def-template: A reusable message definition.
+
+:gt-channel: pass:a[<abbr class="glossary-term" title="{glossary-def-channel}">channel</abbr>]
+:gt-delivery-status: pass:a[<abbr class="glossary-term" title="{glossary-def-delivery-status}">delivery status</abbr>]
+:gt-notification: pass:a[<abbr class="glossary-term" title="{glossary-def-notification}">notification</abbr>]
+:gt-notification-hub: pass:a[<abbr class="glossary-term" title="{glossary-def-notification-hub}">Notification Hub</abbr>]
+:gt-preferences: pass:a[<abbr class="glossary-term" title="{glossary-def-preferences}">preferences</abbr>]
+:gt-recipient: pass:a[<abbr class="glossary-term" title="{glossary-def-recipient}">Recipient</abbr>]
+:gt-record: pass:a[<abbr class="glossary-term" title="{glossary-def-record}">record</abbr>]
+:gt-sender: pass:a[<abbr class="glossary-term" title="{glossary-def-sender}">Sender</abbr>]
+:gt-template: pass:a[<abbr class="glossary-term" title="{glossary-def-template}">template</abbr>]

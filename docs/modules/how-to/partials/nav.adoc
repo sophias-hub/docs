@@ -1,0 +1,12 @@
+* xref:how-to:index.adoc[How-to Guides]
+** Templates
+*** xref:how-to:templates/create.adoc[Create]
+*** xref:how-to:templates/retrieve.adoc[Retrieve]
+*** xref:how-to:templates/update.adoc[Update]
+*** xref:how-to:templates/delete.adoc[Delete]
+** Preferences
+*** xref:how-to:preferences/set.adoc[Set channel preferences]
+*** xref:how-to:preferences/unsubscribe.adoc[Unsubscribe from a channel]
+** Notifications
+*** xref:how-to:notifications/send.adoc[Send a notification]
+*** xref:how-to:notifications/retrieve-record.adoc[Retrieve a delivery record]

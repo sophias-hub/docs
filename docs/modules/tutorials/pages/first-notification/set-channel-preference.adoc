@@ -1,0 +1,36 @@
+= Set a channel preference
+:description: Set a channel preference for a Recipient so Notification Hub will accept a send on that channel.
+
+include::glossary:partial$attributes.adoc[]
+
+In this tutorial, you will set channel {gt-preferences} for a {gt-recipient} so {gt-notification-hub} will accept a send on that channel.
+
+[NOTE]
+====
+In a real product, the {gt-recipient} chooses these switches in notification settings or by unsubscribing.
+
+As the Notification Hub service is a mock, you set the preference yourself to simulate that choice.
+====
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+* You know the {gt-channel} of the {gt-template} from the xref:tutorials:first-notification/create-template.adoc[Create a template] tutorial
+
+== Set a channel preference for your {gt-recipient}
+
+Before Notification Hub sends a notification, it checks per-{gt-recipient} channel preferences.
+
+To set a channel preference, follow these steps:
+
+. Open the _Set channel preferences_ endpoint below.
+. Fill in the request following the example request payload or schema.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=preferences-put]
++
+. Click *Try* and *Execute* to set the channel preferences.
+. See the endpoint response with the channel preferences you set.
+
+== Next step
+
+Proceed to the xref:tutorials:first-notification/send-notification.adoc[Send a notification] tutorial to send your notification.

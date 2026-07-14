@@ -1,0 +1,29 @@
+= Templates
+:description: Explain Notification Hub templates—reusable, channel-specific message definitions.
+
+include::glossary:partial$attributes.adoc[]
+
+A template is a reusable message definition the {gt-sender} stores in {gt-notification-hub} before sending a {gt-notification}.
+
+Each template has one {gt-channel}, so the same wording for an email and SMS notification needs two templates.
+
+A template carries the following attributes:
+
+* A service-assigned identifier
+* A display name
+* A target channel
+* Message content, such as a subject and body for email or a body for SMS
+
+== Actions on templates
+
+The {gt-sender} can:
+
+* xref:how-to:templates/create.adoc[Create] a template
+* xref:how-to:templates/retrieve.adoc[Retrieve] one template or list templates
+* xref:how-to:templates/update.adoc[Update] a template's name, channel, or content
+* xref:how-to:templates/delete.adoc[Delete] a template
+
+== Related
+
+* xref:explanations:channels.adoc[menu:Explanations[Channels]]
+* xref:explanations:notifications.adoc[menu:Explanations[Notifications]]

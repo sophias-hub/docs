@@ -1,0 +1,44 @@
+= Channels
+:description: Explain email, SMS, and push delivery paths in Notification Hub.
+
+include::glossary:partial$attributes.adoc[]
+
+A channel is a delivery path {gt-notification-hub} can use to reach a {gt-recipient}. Every {gt-template} uses exactly one channel, and a send must name that same channel.
+
+== Channels Notification Hub supports
+
+|===
+| Channel | Use case
+
+| Email
+| Welcome message
+
+| SMS
+| One-time password
+
+| Push
+| Payment success or failure notification
+|===
+
+xref:#preferences[Preferences] and xref:#consent[consent] control whether the hub may use a channel for a given {gt-recipient}.
+
+[[preferences]]
+== Preferences
+
+Preferences are per-{gt-recipient} flags that allow or block sending on each {gt-channel}. A channel can be allowed or blocked for a Recipient, meaning the Recipient may or may not receive notifications on that channel.
+
+A Recipient can also unsubscribe from a channel, which blocks sending on that channel.
+
+[[consent]]
+== Consent
+
+Consent is how {gt-notification-hub} applies preferences at send time: a send proceeds only when the xref:explanations:templates.adoc[template]'s channel is allowed for that Recipient.
+
+NOTE: Until a Recipient's preferences are set, the service treats every channel as allowed.
+
+== Related
+
+* xref:explanations:templates.adoc[menu:Explanations[Templates]]
+* xref:explanations:notifications.adoc[menu:Explanations[Notifications]]
+* xref:how-to:preferences/set.adoc[menu:How-to Guides[Set channel preferences]]
+* xref:how-to:preferences/unsubscribe.adoc[menu:How-to Guides[Unsubscribe from a channel]]

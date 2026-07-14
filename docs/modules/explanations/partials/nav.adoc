@@ -1,0 +1,6 @@
+* xref:explanations:index.adoc[Explanations]
+** Notifications
+*** xref:explanations:notifications.adoc[Overview]
+*** xref:explanations:delivery-records.adoc[Delivery records]
+** xref:explanations:templates.adoc[Templates]
+** xref:explanations:channels.adoc[Channels]

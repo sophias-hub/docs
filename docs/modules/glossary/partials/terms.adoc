@@ -1,0 +1,48 @@
+// Glossary definition list entries. Definitions come from glossary:partial$attributes.adoc.
+// Keep tags sorted A–Z by term key (same order as glossary:index.adoc).
+// Term labels: lowercase unless the term is a proper name (Sender, Recipient, Notification Hub).
+
+// tag::channel[]
+[[channel]]*channel*::
+{glossary-def-channel}
+// end::channel[]
+
+// tag::delivery-status[]
+[[delivery-status]]*delivery status*::
+{glossary-def-delivery-status}
+// end::delivery-status[]
+
+// tag::notification[]
+[[notification]]*notification*::
+{glossary-def-notification}
+// end::notification[]
+
+// tag::notification-hub[]
+[[notification-hub]]*Notification Hub*::
+{glossary-def-notification-hub}
+// end::notification-hub[]
+
+// tag::preferences[]
+[[preferences]]*preferences*::
+{glossary-def-preferences}
+// end::preferences[]
+
+// tag::recipient[]
+[[recipient]]*Recipient*::
+{glossary-def-recipient}
+// end::recipient[]
+
+// tag::record[]
+[[record]]*record*::
+{glossary-def-record}
+// end::record[]
+
+// tag::sender[]
+[[sender]]*Sender*::
+{glossary-def-sender}
+// end::sender[]
+
+// tag::template[]
+[[template]]*template*::
+{glossary-def-template}
+// end::template[]

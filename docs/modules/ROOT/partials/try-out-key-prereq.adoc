@@ -1,0 +1,4 @@
+// Shared try-out API key prerequisite (list item).
+// include::ROOT:partial$try-out-key-prereq.adoc[]
+
+* The try-out key is prefilled in interactive endpoint embeds (header: `X-API-Key`, token: `secure-token-123`)

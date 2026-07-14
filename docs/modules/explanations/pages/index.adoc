@@ -1,0 +1,24 @@
+= Explanations
+:description: Product concepts for Notification Hub—start here to choose which explanation to read.
+
+include::glossary:partial$attributes.adoc[]
+
+Explanation pages describe how {gt-notification-hub} works—notifications, templates, channels, preferences, consent, and delivery—without step-by-step try-it-out instructions.
+
+== Explanations in this module
+
+Notifications::
+xref:explanations:notifications.adoc[Overview] ·
+xref:explanations:delivery-records.adoc[Delivery records]
+
+Templates::
+xref:explanations:templates.adoc[Templates]
+
+Channels::
+xref:explanations:channels.adoc[Channels]
+
+== Related
+
+* xref:tutorials:index.adoc[menu:Tutorials[]]
+* xref:how-to:index.adoc[menu:How-to Guides[]]
+* xref:glossary:index.adoc[menu:Glossary[]]

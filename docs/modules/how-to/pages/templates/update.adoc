@@ -1,0 +1,62 @@
+= Update a template
+:description: How to update one field on a Notification Hub template.
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to guide to change one field on an existing {gt-template}.
+
+== Prerequisites
+
+include::ROOT:partial$try-out-key-prereq.adoc[]
+* You have the template `id`
+
+== Update the name
+
+. Open the _Update template_ endpoint below.
+. Fill in the path with the template `id`.
+. In the body, update the `name` field.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-patch]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with the updated `name`.
+
+== Update the channel
+
+. Open the _Update template_ endpoint below.
+. Fill in the path with the template `id`.
+. In the body, update the `channel` field to the desired value (`email`, `sms`, or `push`).
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-patch]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with the updated `channel`.
+
+NOTE: After this update, all notifications sent using this template must use this same channel.
+
+== Update the subject
+
+. Open the _Update template_ endpoint below.
+. Fill in the path with the template `id`.
+. In the body, update the `subject` field to the desired value.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-patch]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with the updated `subject`.
+
+== Update the body
+
+. Open the _Update template_ endpoint below.
+. Fill in the path with the template `id`.
+. In the body, update the `body` field with the desired content.
++
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-patch]
++
+. Click *Try* and *Execute*.
+. See the endpoint response with the updated `body`.
+
+== Related
+
+* xref:how-to:templates/retrieve.adoc[menu:How-to Guides[Retrieve a template]]
+* xref:explanations:templates.adoc[menu:Explanations[Templates]]
