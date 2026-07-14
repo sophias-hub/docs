@@ -16,7 +16,7 @@ A template carries the following attributes:
 
 == Actions on templates
 
-The Sender can:
+The {gt-sender} can:
 
 * xref:how-to:templates/create.adoc[Create] a template
 * xref:how-to:templates/retrieve.adoc[Retrieve] one template or list templates

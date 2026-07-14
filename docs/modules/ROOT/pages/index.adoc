@@ -3,7 +3,7 @@
 
 include::glossary:partial$attributes.adoc[]
 
-{gt-notification-hub} is a dispatch service your application calls when it needs to notify a person. A {gt-sender} asks it to deliver a message to a {gt-recipient} on email, SMS, or push—for example after signup, for a one-time password, or when a payment succeeds.
+Notification Hub is a dispatch service your application calls when it needs to notify a person. A {gt-sender} asks it to deliver a message to a {gt-recipient} on email, SMS, or push—for example after signup, for a one-time password, or when a payment succeeds.
 
 TIP: Hover a dotted term for a short definition, or open the xref:glossary:index.adoc[menu:Glossary[]] for full terms.
 
@@ -23,11 +23,11 @@ xref:tutorials:first-notification/create-template.adoc[Create a template] · xre
 
 [.doc-module-tile]
 ======
-[.tile-kicker]#How-to#
+[.tile-kicker]#How-to Guides#
 
 Task pages you reopen when you need a specific job done.
 
-xref:how-to:templates/create.adoc[Create] · xref:how-to:preferences/set.adoc[Set channel preferences] · xref:how-to:notifications/send.adoc[Send]
+xref:how-to:templates/create.adoc[Create a template] · xref:how-to:preferences/set.adoc[Set channel preferences] · xref:how-to:notifications/send.adoc[Send a notification]
 ======
 
 [.doc-module-tile]
@@ -61,8 +61,8 @@ xref:glossary:index.adoc[Glossary]
 
 === Recommended reading path
 
-. Learn about the Notification Hub service in xref:explanations:notifications.adoc[menu:Explanations[]]
-. Complete the xref:tutorials:first-notification/first-notification.adoc[menu:Tutorials[Send your first notification]]
-. Reuse xref:how-to:index.adoc[menu:How-to Guides[]] to complete tasks as needed
-. Check xref:reference:index.adoc[menu:References[]] for API and SDK pointers
+. Learn notification concepts in xref:explanations:notifications.adoc[Notifications]
+. Complete the xref:tutorials:first-notification/first-notification.adoc[Send your first notification]
+. Reuse xref:how-to:index.adoc[How-to Guides] to complete tasks as needed
+. Check xref:reference:index.adoc[Reference] for API and SDK pointers
 

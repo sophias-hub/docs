@@ -1,4 +1,4 @@
-= How-to
+= How-to Guides
 :description: How-to guides for Notification Hub—open one when you need a specific job done.
 
 include::glossary:partial$attributes.adoc[]
@@ -20,5 +20,11 @@ xref:how-to:preferences/set.adoc[Set channel preferences] ·
 xref:how-to:preferences/unsubscribe.adoc[Unsubscribe from a channel]
 
 Notifications::
-xref:how-to:notifications/send.adoc[Send] ·
-xref:how-to:notifications/retrieve-record.adoc[Retrieve record]
+xref:how-to:notifications/send.adoc[Send a notification] ·
+xref:how-to:notifications/retrieve-record.adoc[Retrieve a delivery record]
+
+== Related
+
+* xref:tutorials:index.adoc[menu:Tutorials[]]
+* xref:explanations:index.adoc[menu:Explanations[]]
+* xref:reference:index.adoc[menu:Reference[]]

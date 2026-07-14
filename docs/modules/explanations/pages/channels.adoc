@@ -20,7 +20,7 @@ A channel is a delivery path {gt-notification-hub} can use to reach a {gt-recipi
 | Payment success or failure notification
 |===
 
-xref:#preferences[Preferences] and xref:#consent[Consent] control whether the hub may use a channel for a given Recipient.
+xref:#preferences[Preferences] and xref:#consent[consent] control whether the hub may use a channel for a given {gt-recipient}.
 
 [[preferences]]
 == Preferences
@@ -40,5 +40,5 @@ NOTE: Until a Recipient's preferences are set, the service treats every channel 
 
 * xref:explanations:templates.adoc[menu:Explanations[Templates]]
 * xref:explanations:notifications.adoc[menu:Explanations[Notifications]]
-* xref:how-to:preferences/set.adoc[menu:How-to[Set channel preferences]]
-* xref:how-to:preferences/unsubscribe.adoc[menu:How-to[Unsubscribe from a channel]]
+* xref:how-to:preferences/set.adoc[menu:How-to Guides[Set channel preferences]]
+* xref:how-to:preferences/unsubscribe.adoc[menu:How-to Guides[Unsubscribe from a channel]]

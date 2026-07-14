@@ -11,11 +11,12 @@ Use this module when you are new to {gt-notification-hub} to learn how to use th
 
 . xref:tutorials:first-notification/first-notification.adoc[menu:Tutorials[Send your first notification]]
 
-== Next steps
+== Next step
 
-* Proceed to the xref:tutorials:first-notification/first-notification.adoc[Send your first notification] tutorial to send your first notification.
+Proceed to the xref:tutorials:first-notification/first-notification.adoc[Send your first notification] tutorial to send your first notification.
 
 == Related
 
 * xref:ROOT:index.adoc[menu:Start here[]]
 * xref:explanations:index.adoc[menu:Explanations[]]
+* xref:how-to:index.adoc[menu:How-to Guides[]]

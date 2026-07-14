@@ -3,7 +3,7 @@
 
 include::glossary:partial$attributes.adoc[]
 
-In this tutorial, you will set a channel preference for a {gt-recipient} so Notification Hub will accept a send on that channel.
+In this tutorial, you will set channel {gt-preferences} for a {gt-recipient} so {gt-notification-hub} will accept a send on that channel.
 
 [NOTE]
 ====
@@ -15,7 +15,7 @@ As the Notification Hub service is a mock, you set the preference yourself to si
 == Prerequisites
 
 include::ROOT:partial$try-out-key-prereq.adoc[]
-* You know the {gt-channel} of the {gt-template} from the xref:tutorials:first-notification/create-template.adoc[menu:Tutorials[Create a template]] tutorial
+* You know the {gt-channel} of the {gt-template} from the xref:tutorials:first-notification/create-template.adoc[Create a template] tutorial
 
 == Set a channel preference for your {gt-recipient}
 
@@ -23,16 +23,14 @@ Before Notification Hub sends a notification, it checks per-{gt-recipient} chann
 
 To set a channel preference, follow these steps:
 
-. Open the _Set channel preference_ endpoint below.
-. Fill in the following in your request:
-.. path with the {gt-recipient} identifier
-.. body with the channels you want to send to set to `true`
+. Open the _Set channel preferences_ endpoint below.
+. Fill in the request following the example request payload or schema.
 +
 include::ROOT:partial$rapi-doc-mini.adoc[tag=preferences-put]
 +
-. Click *Try* and *Execute* to set the channel preference.
-. See the endpoint response to verify the channel preference is set.
+. Click *Try* and *Execute* to set the channel preferences.
+. See the endpoint response with the channel preferences you set.
 
-== Next steps
+== Next step
 
-Proceed to xref:tutorials:first-notification/send-notification.adoc[menu:Tutorials[Send a notification]].
+Proceed to the xref:tutorials:first-notification/send-notification.adoc[Send a notification] tutorial to send your notification.

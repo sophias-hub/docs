@@ -5,7 +5,7 @@ include::glossary:partial$attributes.adoc[]
 
 Use this tutorial path to send your first notification.
 
-== Tutorials in this module
+== Path
 
 The path to send your first notification is the following sequence of tutorials:
 
@@ -13,6 +13,6 @@ The path to send your first notification is the following sequence of tutorials:
 . xref:tutorials:first-notification/set-channel-preference.adoc[Set a channel preference]
 . xref:tutorials:first-notification/send-notification.adoc[Send a notification]
 
-== Next steps
+== Next step
 
 Proceed to the xref:tutorials:first-notification/create-template.adoc[Create a template] tutorial to create a template for your notification.

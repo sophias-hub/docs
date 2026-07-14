@@ -1,5 +1,5 @@
 = Create a template
-:description: Create a reusable notification template and retrieve it.
+:description: Create a reusable notification template and confirm it in the catalog.
 
 include::glossary:partial$attributes.adoc[]
 
@@ -11,19 +11,19 @@ include::ROOT:partial$try-out-key-prereq.adoc[]
 
 == Create and confirm the template
 
-A {gt-template} is the reusable message you want to send. The service needs one set up before it can send a notification.
+A template is the reusable message you want to send. The service needs one set up before it can send a notification.
 
 To create a template, follow these steps:
 
 . Open the _Create template_ endpoint below.
-. Fill in the request following the example request payload.
+. Fill in the request following the example request payload or schema.
 +
 include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-create]
 +
-. Click *Try* and *Execute* to create the template.
-. See the endpoint response to verify successful template creation.
+. Click *Try* and *Execute*.
+. See the endpoint response with the created template.
 . Keep the service-assigned template `id` for later tutorial steps.
 
-== Next steps
+== Next step
 
 Proceed to the xref:tutorials:first-notification/set-channel-preference.adoc[Set a channel preference] tutorial to set the channel preference for your notification.

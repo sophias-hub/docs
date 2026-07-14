@@ -33,7 +33,7 @@ Document Progress:
 - [ ] Section titles explanatory and concise (not vague Why this matters)
 - [ ] Scannable: short paragraphs, lists, tables, diagrams — no walls of text
 - [ ] Full sentences outside lists; consistent terminology (Sender, Recipient, Notification Hub; statuses/codes in backticks)
-- [ ] Glossary: include attributes once; mark terms with `{gt-*}`; casing per AGENTS.md
+- [ ] Glossary: include attributes once; mark terms with `{gt-*}` (how-tos/tutorials from the lead; explanations: plain text only in the subject’s definition sentence); casing per AGENTS.md
 - [ ] Content exhaustive for one job, concise in wording
 - [ ] Behavior/concept changes also update explanation pages (+ diagrams if needed)
 - [ ] Off-hub links use playbook `{url-*}` attributes + trailing ^
@@ -43,7 +43,7 @@ Document Progress:
 - [ ] Tutorials/how-tos: rapi-doc-mini for HTTP; schemas via API reference links
 - [ ] Diagrams via write-diagrams `[mermaid, width=60%]` where appropriate
 - [ ] Shortest successful path: limitations/requirements prevent failure (no “if it fails…” recovery)
-- [ ] Ends with == Related or == Next steps; Related link titles use `menu:Area[Page title]`
+- [ ] Ends with == Related or == Next step; `menu:Area[Page title]` only on bare Related-style links (no surrounding prose); How-to area label is `How-to Guides`
 - [ ] Explanation pages stay conceptual; task steps live in how-tos (or tutorials)
 - [ ] Updated module `partials/nav.adoc` if navigation changed; ROOT includes those partials
 - [ ] No auth/error-catalog pages in this hub (point to `{url-api-docs}`)
@@ -82,7 +82,7 @@ include::ROOT:partial$rapi-doc-mini.adoc[tag=…]
 . See the endpoint response …
 
 == Related
-(optional; `menu:How-to[…]` / `menu:Explanations[…]`)
+(optional; `menu:How-to Guides[…]` / `menu:Explanations[…]`)
 ```
 
 ### Tutorial step (sample: `tutorials/pages/first-notification/create-template.adoc`)
@@ -103,7 +103,7 @@ include::ROOT:partial$try-out-key-prereq.adoc[]
 
 (numbered RapiDoc steps; keep values for later steps)
 
-== Next steps
+== Next step
 
 Proceed to the xref:tutorials:…[Next tutorial title] tutorial …
 ```
@@ -116,7 +116,7 @@ Proceed to the xref:tutorials:…[Next tutorial title] tutorial …
 
 include::glossary:partial$attributes.adoc[]
 
-Lead sentences with `{gt-*}` terms.
+Lead: plain text for this page’s subject in its definition sentence; `{gt-*}` for other terms.
 
 include::ROOT:partial$mock-service-note.adoc[]
 (optional)
@@ -137,8 +137,10 @@ Prose / lists that explain the chart.
 == Related
 
 * xref:…[menu:Explanations[…]]
-* xref:…[menu:How-to[…]]
+* xref:…[menu:How-to Guides[…]]
 ```
+
+How-to Related root label is always `How-to Guides`.
 
 ## Hard rules
 

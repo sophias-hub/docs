@@ -2,6 +2,8 @@
 // Include once per page: include::glossary:partial$attributes.adoc[]
 // Then mark terms inline with short particles: {gt-sender}, {gt-template}, …
 // (Particles expand to hoverable <abbr> using the definitions below.)
+// Explanations: plain text for the page subject in its definition sentence; then {gt-*}.
+// How-tos / tutorials: use {gt-*} from the lead (including the page subject).
 // Keep both blocks sorted A–Z by term key.
 // Display casing: lowercase for common terms; capitalize role/product names only.
 

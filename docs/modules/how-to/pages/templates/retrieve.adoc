@@ -27,3 +27,9 @@ include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-list]
 +
 . Click *Try* and *Execute*.
 . See the endpoint response with all templates.
+
+== Related
+
+* xref:how-to:templates/create.adoc[menu:How-to Guides[Create a template]]
+* xref:how-to:templates/update.adoc[menu:How-to Guides[Update a template]]
+* xref:explanations:templates.adoc[menu:Explanations[Templates]]

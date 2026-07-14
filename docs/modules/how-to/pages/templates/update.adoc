@@ -55,3 +55,8 @@ include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-patch]
 +
 . Click *Try* and *Execute*.
 . See the endpoint response with the updated `body`.
+
+== Related
+
+* xref:how-to:templates/retrieve.adoc[menu:How-to Guides[Retrieve a template]]
+* xref:explanations:templates.adoc[menu:Explanations[Templates]]

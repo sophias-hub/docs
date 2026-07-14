@@ -32,8 +32,9 @@ Write for **one common audience**: people who may have never heard of Notificati
 
 Attributes are set in `antora-playbook.yml`. Prefer attributes over hard-coded base URLs.
 
-- Off-hub (new tab): `link:{url-api-docs}[menu:Reference[API reference]^]` (and the same pattern for SDK / changelog / releases). Use `{url-*}[Label^]` in tables when `menu:` is unnecessary.
-- In-hub (same tab): `xref:module:page.adoc[Label]` or `xref:module:page.adoc[menu:Area[Page title]]`
+- Off-hub (new tab): `link:{url-api-docs}[API reference^]` (same pattern for SDK / changelog / releases). Prefer playbook `{url-*}` attributes over hard-coded URLs.
+- In-hub (same tab): `xref:module:page.adoc[Page title]`
+- Use `menu:Area[Page title]` **only** when the link stands alone with no surrounding sentence (typically `== Related` list items). In running prose (including Next step, tips, and “see … for …” notes), use the plain page title only.
 - In-page section: define `[[anchor-id]]` above the target `==` / `===`, then link with `xref:#anchor-id[label]` (same page) or `xref:module:page.adoc#anchor-id[label]` (other page). Do **not** use `<<anchor>>` / `<<anchor,label>>`.
 
 ## Non-negotiables
@@ -83,17 +84,17 @@ Attributes are set in `antora-playbook.yml`. Prefer attributes over hard-coded b
 
 ### Tutorial page shape (canonical: `tutorials/pages/first-notification/*.adoc`)
 
-- Path overview (`first-notification.adoc`): `Use this tutorial path to …`; list the sequence; `== Next steps` to the first step page
-- Step pages: `In this tutorial, you will …`; `== Prerequisites` with try-out-key-prereq; numbered RapiDoc steps like how-tos; end with `== Next steps` to the next tutorial page (plain xref title is fine on tutorial next-steps)
+- Path overview (`first-notification.adoc`): `Use this tutorial path to …`; list the sequence; `== Next step` to the first step page
+- Step pages: `In this tutorial, you will …`; `== Prerequisites` with try-out-key-prereq; numbered RapiDoc steps like how-tos; end with `== Next step` to the next tutorial page (plain xref title is fine on tutorial next-steps)
 
 ### Explanation page shape (canonical: `explanations/pages/*.adoc`)
 
-- Lead: 1–2 full sentences defining the concept with `{gt-*}` terms
+- Lead: 1–2 full sentences; plain text for the page’s subject in its definition sentence, `{gt-*}` for other terms
 - Concepts and mental models only—**no** task steps or RapiDoc embeds
 - Optional `include::ROOT:partial$mock-service-note.adoc[]` when delivery realism matters
 - Use subsections for one idea each; put related subtopics on the same page when they share one focus (example: `channels.adoc` holds Preferences and Consent under `[[preferences]]` / `[[consent]]`)
 - Diagrams: `[mermaid, width=60%]` via **`write-diagrams`**; follow with short prose / lists that explain the chart
-- End with `== Related` and `menu:` xrefs to sibling explanations and matching how-tos
+- End with `== Related` (bare `menu:` xrefs) pointing to sibling explanations and matching how-tos
 
 ### Code: include from source
 
@@ -121,6 +122,8 @@ Use the modules above (no operations module; no authentication pages). One Diát
 - Concepts → `explanations:notifications.adoc` (overview), `delivery-records.adoc`, `templates.adoc`, `channels.adoc` (preferences + consent sections)
 - Terms → `glossary:index.adoc`
 - Inline hover terms → `include::glossary:partial$attributes.adoc[]` once per page, then `{gt-sender}`, `{gt-template}`, … (definitions live only in that attributes partial)
+- How-tos and tutorials: use `{gt-*}` from the lead onward (including the page’s subject term)
+- Explanations (and any dictionary-style definition): on the defining sentence for that page’s subject, use plain text (for example “A template is …”), then `{gt-*}` elsewhere
 - API/SDK pointers → `reference:index.adoc`
 
 ### Glossary display casing
@@ -137,7 +140,7 @@ In `glossary:partial$attributes.adoc` (and therefore in `{gt-*}` output):
 - Navigation: **only** `modules/ROOT/nav.adoc` is registered in `antora.yml`; it includes each module’s `partials/nav.adoc`. Do not add extra per-module `nav.adoc` files to the playbook.
 - Cross-module: `xref:how-to:templates/create.adoc[…]`
 - Shared includes: `include::ROOT:partial$…[]`
-- Glossary: definitions only in `glossary:partial$attributes.adoc`; glossary page reuses them via `glossary:partial$terms.adoc`; other pages use `{gt-*}`; links `xref:glossary:index.adoc[menu:Glossary[]]`
+- Glossary: definitions only in `glossary:partial$attributes.adoc`; glossary page reuses them via `glossary:partial$terms.adoc`; other pages use `{gt-*}` (see hover rules under Routing heuristics)
 - Diagrams: inline `[mermaid, width=60%]` — author via **`write-diagrams`**
 
 ### Reuse toolkit
@@ -174,7 +177,7 @@ Until a Recipient's preferences are set, the service treats every channel as all
 
 [TIP]
 ====
-Hover a dotted term for a short definition, or open the xref:glossary:index.adoc[menu:Glossary[]].
+Hover a dotted term for a short definition, or open the xref:glossary:index.adoc[Glossary].
 ====
 
 [IMPORTANT]
@@ -202,15 +205,16 @@ Apply these rules on every hub page:
 6. **No walls of text** — use subsections, lists, tables, and diagrams instead of long unbroken paragraphs.
 7. **Consistent formatting and terminology** — Sender, Recipient, Notification Hub, template, preferences, record / `recordId`, channel names, statuses in backticks (`queued`, `delivered`, `failed`), error codes in backticks.
 
-In AsciiDoc: lead with 1–2 full sentences; structure with `==` / `===`; prefer short paragraphs and lists; end with `== Related` or `== Next steps`.
+In AsciiDoc: lead with 1–2 full sentences; structure with `==` / `===`; prefer short paragraphs and lists; end with `== Related` or `== Next step`.
 
-Related and next-step link titles use the AsciiDoc `menu:` macro with the Diátaxis area as the root, for example:
+In `== Related` (and other bare link lists with no surrounding sentence), use `menu:` with the Diátaxis area as the root, for example:
 
-* `xref:how-to:notifications/retrieve-record.adoc[menu:How-to[Retrieve a delivery record]]`
+* `xref:how-to:notifications/retrieve-record.adoc[menu:How-to Guides[Retrieve a delivery record]]`
 * `xref:explanations:channels.adoc[menu:Explanations[Channels]]`
-* `link:{url-api-docs}[menu:Reference[API reference]^]`
 
-Use `menu:Glossary[]` for the glossary (single label). Escape commas in menu titles as `&#44;` so AsciiDoc does not treat them as submenu separators (for example `menu:Tutorials[Create&#44; prefer&#44; and send]`).
+In running prose, use the plain page title only, for example `xref:how-to:notifications/send.adoc[Send a notification]` and `link:{url-api-docs}[API reference^]`.
+
+Escape commas in `menu:` titles as `&#44;` so AsciiDoc does not treat them as submenu separators (for example `menu:Tutorials[Create&#44; prefer&#44; and send]`).
 
 Document the **shortest successful path**: state requirements and limitations that prevent failure; leave error response detail to `{url-api-docs}`.
 Keep task steps in **how-tos** (and tutorials); explanation pages stay on concepts and mental models.

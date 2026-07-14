@@ -1,4 +1,4 @@
-= Retrieve record
+= Retrieve a delivery record
 :description: How to look up Notification Hub delivery records.
 
 include::glossary:partial$attributes.adoc[]
@@ -30,3 +30,8 @@ include::ROOT:partial$rapi-doc-mini.adoc[tag=records-list]
 +
 . Click *Try* and *Execute*.
 . See the endpoint response with the matching records.
+
+== Related
+
+* xref:how-to:notifications/send.adoc[menu:How-to Guides[Send a notification]]
+* xref:explanations:delivery-records.adoc[menu:Explanations[Delivery records]]

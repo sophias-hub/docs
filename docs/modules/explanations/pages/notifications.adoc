@@ -5,7 +5,7 @@ include::glossary:partial$attributes.adoc[]
 
 A {gt-notification} is the message a {gt-sender} asks {gt-notification-hub} to deliver to a {gt-recipient} on a selected {gt-channel}.
 
-Instead of owning reusable xref:explanations:templates.adoc[templates], per-Recipient xref:explanations:channels.adoc#preferences[preferences], send acceptance, and delivery records, a Sender delegates these tasks to Notification Hub.
+Instead of owning reusable xref:explanations:templates.adoc[templates], per-{gt-recipient} xref:explanations:channels.adoc#preferences[preferences], send acceptance, and delivery records, a {gt-sender} delegates these tasks to {gt-notification-hub}.
 
 include::ROOT:partial$mock-service-note.adoc[]
 
@@ -25,17 +25,15 @@ flowchart TD
   Block --> End
 ....
 
-The Sender sends a request that names a {gt-template}, a Recipient, and a channel.
-Notification Hub checks that the template exists, that the send uses that template's channel, and that preferences allow the channel for the Recipient. Depending on the results, the following happens:
+The {gt-sender} sends a request that names a {gt-template}, a {gt-recipient}, and a {gt-channel}. {gt-notification-hub} checks that the template exists, that the send uses that template's channel, and that preferences allow the channel for the Recipient. Depending on the results, the following happens:
 
 * If the checks _pass_, Notification Hub accepts the send, creates a delivery {gt-record}, and a channel carries the message to the Recipient.
 * If the checks _fail_—for example the template is missing, the channel doesn't match the template, or preferences block that channel—Notification Hub rejects the send.
 +
-No delivery record is created, the notification is not delivered on a channel, and the Sender receives an error response instead of a record identifier.
-See link:{url-api-docs}[menu:Reference[API reference]^] for error response shapes.
+No delivery record is created, the notification isn't delivered on a channel, and the Sender receives an error response instead of a record identifier. See link:{url-api-docs}[API reference^] for error response shapes.
 
 == Related
 
 * xref:explanations:delivery-records.adoc[menu:Explanations[Delivery records]]
-* xref:how-to:notifications/send.adoc[menu:How-to[Send a notification]]
-* xref:how-to:notifications/retrieve-record.adoc[menu:How-to[Retrieve a delivery record]]
+* xref:how-to:notifications/send.adoc[menu:How-to Guides[Send a notification]]
+* xref:how-to:notifications/retrieve-record.adoc[menu:How-to Guides[Retrieve a delivery record]]

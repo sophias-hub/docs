@@ -18,4 +18,9 @@ include::ROOT:partial$try-out-key-prereq.adoc[]
 include::ROOT:partial$rapi-doc-mini.adoc[tag=unsubscribe]
 +
 . Click *Try* and *Execute*.
-. See the endpoint response to verify the channel is set to `false`.
+. See the endpoint response with that channel set to `false`.
+
+== Related
+
+* xref:how-to:preferences/set.adoc[menu:How-to Guides[Set channel preferences]]
+* xref:explanations:channels.adoc[menu:Explanations[Channels]]

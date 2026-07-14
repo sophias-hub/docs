@@ -3,7 +3,7 @@
 
 include::glossary:partial$attributes.adoc[]
 
-In this tutorial, you will send a notification with your template and channel preference, and look up its delivery {gt-record}.
+In this tutorial, you will send a {gt-notification} with your {gt-template} and channel preference, and look up its delivery {gt-record}.
 
 == Prerequisites
 
@@ -18,31 +18,26 @@ With a template and an allowed channel preference in place, you can now send a n
 === Step 1: Send the notification
 
 . Open the _Send notification_ endpoint below.
-. Fill in the following in your request:
-.. path with the {gt-recipient} identifier
-.. body with the `recipient`, `channel`, and `templateId` fields set to the values from the previous tutorials
+. Fill in the request following the example request payload or schema.
 +
 include::ROOT:partial$rapi-doc-mini.adoc[tag=send]
 +
 . Click *Try* and *Execute* to send the notification.
-. See the endpoint response to verify successful notification send.
-. Copy the `recordId` from the response for the next step.
+. See the endpoint response and copy the `recordId` for the next step.
 
 === Step 2: Look up the delivery record
 
-. Open the _Look up delivery record_ endpoint below.
+. Open the _Retrieve record_ endpoint below.
 . Fill in the path with the `recordId` from the previous step.
 +
 include::ROOT:partial$rapi-doc-mini.adoc[tag=records-get]
 +
 . Click *Try* and *Execute* to look up the delivery record.
-. See the endpoint response to verify the delivery record `status` is `delivered`.
+. See the endpoint response with the delivery record `status` set to `delivered`.
 
-You have successfully completed the tutorial to setting up your first notification.
+You have successfully completed the tutorial and sent your first notification!
 
-== Next steps
+== Next step
 
-Now, you may proceed to the following:
-
-* Learn more about Notification Hub in xref:explanations:index.adoc[menu:Explanations[]]
-* Check xref:how-to:index.adoc[menu:How-to[]] for more detailed step-by-step instructions on how to use the service
+* Learn more about Notification Hub in xref:explanations:index.adoc[Explanations]
+* Open xref:how-to:index.adoc[How-to Guides] for more task-focused guides

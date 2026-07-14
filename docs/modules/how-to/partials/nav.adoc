@@ -8,5 +8,5 @@
 *** xref:how-to:preferences/set.adoc[Set channel preferences]
 *** xref:how-to:preferences/unsubscribe.adoc[Unsubscribe from a channel]
 ** Notifications
-*** xref:how-to:notifications/send.adoc[Send]
-*** xref:how-to:notifications/retrieve-record.adoc[Retrieve record]
+*** xref:how-to:notifications/send.adoc[Send a notification]
+*** xref:how-to:notifications/retrieve-record.adoc[Retrieve a delivery record]
