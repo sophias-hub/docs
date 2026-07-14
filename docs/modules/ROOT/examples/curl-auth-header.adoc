@@ -1,0 +1,10 @@
+// Minimal curl sample for includes.
+// include::example$curl-auth-header.adoc[tag=header]
+
+// tag::header[]
+X-API-Key: secure-token-123
+// end::header[]
+
+// tag::note[]
+Use the try-out key `secure-token-123` in the `X-API-Key` header when calling the mock API from these docs.
+// end::note[]

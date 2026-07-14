@@ -1,21 +1,11 @@
 * xref:index.adoc[Start here]
 
-* Tutorials
-** xref:tutorials/first-notification.adoc[Send your first notification]
+include::tutorials:partial$nav.adoc[]
 
-* How-to
-** xref:how-to/authentication.adoc[Authenticate requests]
-** xref:how-to/send-notification.adoc[Send a notification]
+include::how-to:partial$nav.adoc[]
 
-* Reference
-** xref:reference/api.adoc[API reference]
-** xref:reference/sdk.adoc[SDK reference]
-** xref:reference/errors.adoc[Errors]
+include::explanation:partial$nav.adoc[]
 
-* Explanation
-** xref:explanation/how-docs-stay-correct.adoc[How docs stay correct]
+include::reference:partial$nav.adoc[]
 
-* Operations
-** xref:operations/configuration.adoc[Configuration]
-** xref:operations/deployment.adoc[Deployment]
-
+include::glossary:partial$nav.adoc[]

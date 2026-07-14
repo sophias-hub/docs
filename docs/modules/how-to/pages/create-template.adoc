@@ -1,0 +1,36 @@
+= Create a template
+:description: How to add a reusable notification template to the Notification Hub catalog.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when you need to add a reusable notification {gt-template} to the catalog.
+A template is a named definition for one {gt-channel} (email, SMS, or push) that later sends can reference.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* A template `id`, display `name`, and `channel` (`email`, `sms`, or `push`)
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Limitations
+
+* The template `id` must be unique in the catalog.
+* Use a stable `id` (for example `welcome-email`) so a {gt-sender} can keep referring to it.
+
+== Create the template
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-create]
+
+Success returns **201**.
+
+== Verify success
+
+Retrieve the same id: xref:how-to:retrieve-template.adoc[menu:How-to[Retrieve a template]].
+
+== Related
+
+* xref:how-to:update-template.adoc[menu:How-to[Update a template]]
+* xref:tutorials:first-notification.adoc[menu:Tutorials[Create&#44; prefer&#44; and send]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

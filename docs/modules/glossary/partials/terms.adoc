@@ -1,0 +1,51 @@
+// Glossary definition list entries. Definitions come from glossary:partial$attributes.adoc.
+
+// tag::sender[]
+[[sender]]*Sender*::
+{glossary-def-sender}
+// end::sender[]
+
+// tag::recipient[]
+[[recipient]]*Recipient*::
+{glossary-def-recipient}
+// end::recipient[]
+
+// tag::notification-hub[]
+[[notification-hub]]*Notification Hub*::
+{glossary-def-notification-hub}
+// end::notification-hub[]
+
+// tag::template[]
+[[template]]*template*::
+{glossary-def-template}
+// end::template[]
+
+// tag::preferences[]
+[[preferences]]*preferences*::
+{glossary-def-preferences}
+// end::preferences[]
+
+// tag::channel[]
+[[channel]]*channel*::
+{glossary-def-channel}
+// end::channel[]
+
+// tag::record[]
+[[record]]*record* / `recordId`::
+{glossary-def-record}
+// end::record[]
+
+// tag::delivery-status[]
+[[delivery-status]]*delivery status*::
+{glossary-def-delivery-status}
+// end::delivery-status[]
+
+// tag::webhook[]
+[[webhook]]*webhook*::
+{glossary-def-webhook}
+// end::webhook[]
+
+// tag::api-key[]
+[[api-key]]*API key* / `X-API-Key`::
+{glossary-def-api-key}
+// end::api-key[]

@@ -1,0 +1,24 @@
+= Retrieve a template
+:description: How to fetch one Notification Hub template by id.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when you need to confirm a {gt-template} exists and inspect its details before sending or updating.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* An existing template `id`
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Retrieve by id
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-get]
+
+== Related
+
+* xref:how-to:create-template.adoc[menu:How-to[Create a template]]
+* xref:how-to:update-template.adoc[menu:How-to[Update a template]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

@@ -1,0 +1,32 @@
+= Connect with an API key
+:description: How to authenticate Notification Hub requests with the X-API-Key header.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Notification Hub protects business operations—the {gt-template} catalog, {gt-preferences}, sends, delivery {gt-record} lookups, and {gt-webhook} registration—with an {gt-api-key}.
+A {gt-sender} passes the key in the `X-API-Key` header before any authenticated try-it-out step in these guides.
+
+== What you need
+
+include::ROOT:partial$demo-defaults.adoc[]
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+[IMPORTANT]
+====
+Treat `secure-token-123` as the *try-out key* for this documentation and the mock service—not a production secret.
+====
+
+== Try an authenticated call
+
+List templates to confirm the key works.
+Click the path to expand Try it out.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-list]
+
+== Related
+
+* xref:tutorials:first-notification.adoc[menu:Tutorials[Create&#44; prefer&#44; and send]]
+* link:{url-api-docs}[menu:Reference[API reference]^]
+* link:{url-sdk-docs}[menu:Reference[SDK reference]^]

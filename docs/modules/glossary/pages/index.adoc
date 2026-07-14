@@ -1,0 +1,41 @@
+= Glossary
+:description: Definitions of Notification Hub terms used across these guides.
+
+include::partial$attributes.adoc[]
+
+Hover a dotted term in the guides to see a short definition.
+This page lists the full wording for every term.
+
+== Agents and service
+
+include::partial$terms.adoc[tag=sender]
+
+include::partial$terms.adoc[tag=recipient]
+
+include::partial$terms.adoc[tag=notification-hub]
+
+== Messages and consent
+
+include::partial$terms.adoc[tag=template]
+
+include::partial$terms.adoc[tag=preferences]
+
+include::partial$terms.adoc[tag=channel]
+
+== Tracking and events
+
+include::partial$terms.adoc[tag=record]
+
+include::partial$terms.adoc[tag=delivery-status]
+
+include::partial$terms.adoc[tag=webhook]
+
+== Authentication
+
+include::partial$terms.adoc[tag=api-key]
+
+== Related
+
+* xref:explanation:what-is-notification-hub.adoc[menu:Explanation[Notification Hub overview]]
+* xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]]
+* xref:explanation:channels-and-consent.adoc[menu:Explanation[Channels and consent]]

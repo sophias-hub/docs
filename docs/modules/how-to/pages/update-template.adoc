@@ -1,0 +1,43 @@
+= Update a template
+:description: How to replace or partially update a Notification Hub template.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when you need to change an existing {gt-template}’s name, {gt-channel}, or content without creating a new id.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* An existing template `id`
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Choose replace or partial update
+
+[tabs]
+====
+Full replace (PUT)::
++
+--
+Use when you are replacing the whole template definition.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-put]
+--
+Partial update (PATCH)::
++
+--
+Use when you only need to change some fields.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-patch]
+--
+====
+
+== Verify success
+
+Retrieve the template again: xref:how-to:retrieve-template.adoc[menu:How-to[Retrieve a template]].
+
+== Related
+
+* xref:how-to:delete-template.adoc[menu:How-to[Delete a template]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

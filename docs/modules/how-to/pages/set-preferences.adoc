@@ -1,0 +1,34 @@
+= Set preferences
+:description: How to allow or block email, SMS, and push for a Notification Hub recipient.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when you need to allow or block each {gt-channel} for a {gt-recipient} before sending.
+Notification Hub’s {gt-preferences} are consent switches for email, SMS, and push.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* The Recipient identifier (for example, an email address)
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Limitations
+
+* Set the channel you plan to send on to `true` before that send.
+* Until preferences exist, the demo treats all channels as allowed.
+
+== Replace all channel preferences
+
+Set all three channel flags (`email`, `sms`, `push`) in one request.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=preferences-put]
+
+See xref:explanation:channels-and-consent.adoc[menu:Explanation[Channels and consent]].
+
+== Related
+
+* xref:how-to:unsubscribe.adoc[menu:How-to[Unsubscribe from a channel]]
+* xref:how-to:send-notification.adoc[menu:How-to[Send a notification]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

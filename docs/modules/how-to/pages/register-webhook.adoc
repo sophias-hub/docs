@@ -1,0 +1,30 @@
+= Register a webhook
+:description: How to register a callback URL for Notification Hub delivery events.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when the same {gt-sender} should learn about delivery events through a {gt-webhook}.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* An `http` or `https` callback URL
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+include::ROOT:partial$mock-service-note.adoc[]
+
+== Register the callback URL
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=webhooks-create]
+
+== Inspect delivery attempts
+
+After you send notifications, inspect fake delivery attempts (`GET /api/v1/webhooks/deliveries`) on the link:{url-api-docs}[menu:Reference[API reference]^].
+
+== Related
+
+* xref:how-to:check-delivery-status.adoc[menu:How-to[Check delivery status]]
+* xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

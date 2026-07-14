@@ -1,0 +1,104 @@
+= Create a template, set a preference, and send
+:description: First-success tutorial: create a template, retrieve it, set preferences, send, and check the record.
+
+
+include::glossary:partial$attributes.adoc[]
+
+{gt-notification-hub} is a service you call over HTTP to send email, SMS, or push messages to people who opted in.
+This tutorial is a complete first-success path: by the end, you will have created a message template, allowed a channel for one Recipient, sent a notification, and looked up its delivery status.
+No signup or installation is required—every step below runs against a live mock service directly from this page.
+
+include::ROOT:partial$mock-service-note.adoc[]
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Learning path at a glance
+
+Each step builds on the one before it: a {gt-template} defines *what* to send, a preference defines *whether* you may send it, and the send itself uses both.
+
+[mermaid]
+....
+flowchart LR
+  A["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;creates a `template`"] --> B["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;retrieves the `template`"]
+  B --> C["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;sets channel preferences"]
+  C --> D["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;sends a notification"]
+  D --> E["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;checks the delivery `record`"]
+....
+
+== What you need
+
+include::ROOT:partial$demo-defaults.adoc[]
+
+== Limitations
+
+* Use a unique template `id` (lowercase letters, numbers, hyphens).
+* Set the {gt-channel} you will send on to `true` in preferences before the send.
+* This tutorial uses HTTP try-it-out; client libraries live on the link:{url-sdk-docs}[menu:Reference[SDK reference]^].
+
+[NOTE]
+====
+Interactive rows below start *collapsed*. Click a path (for example `POST /api/v1/templates`) to expand it, review the fields, then click *Try* and *Execute* to send the request and see the live response.
+====
+
+== Create a template
+
+A {gt-template} is the reusable message you want to send—Notification Hub needs one before it can send anything.
+Add a template with a unique `id`, a name, and a channel (`email`, `sms`, or `push`).
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-create]
+
+A successful create returns **201**.
+
+== Retrieve the template
+
+Confirm the template landed in the catalog by fetching it back with the same id.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-get]
+
+You should see the same id, name, and channel from the create step.
+
+== Set a preference
+
+Before Notification Hub will send to someone, it checks {gt-preferences}: per-Recipient flags that say whether each channel is allowed.
+Allow the channel you plan to send on for your Recipient.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=preferences-put]
+
+Set the channel you plan to use to `true` (for example, `email: true` for an email template).
+
+[TIP]
+====
+Until preferences exist, the demo allows all channels. Setting them explicitly makes consent visible in demos.
+====
+
+== Send a notification
+
+With a template and an allowed preference in place, send the notification using the template id and the Recipient from the previous steps.
+Match the channel to both the template and the preference, or Notification Hub blocks the send.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=send]
+
+A successful response includes a status and a {gt-record} id (`recordId`).
+Keep that id for the next step.
+
+== Check delivery status (optional)
+
+Look up the delivery record for the send you just completed, using the `recordId` from the previous step.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=records-get]
+
+In the demo, accepted sends usually move quickly to `delivered`.
+
+== Next steps
+
+* xref:how-to:create-template.adoc[menu:How-to[Create a template]]
+* xref:how-to:update-template.adoc[menu:How-to[Update a template]]
+* xref:how-to:delete-template.adoc[menu:How-to[Delete a template]]
+* xref:how-to:set-preferences.adoc[menu:How-to[Set preferences]]
+* xref:how-to:unsubscribe.adoc[menu:How-to[Unsubscribe from a channel]]
+* xref:how-to:check-delivery-status.adoc[menu:How-to[Check delivery status]]
+* xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]]
+* xref:explanation:channels-and-consent.adoc[menu:Explanation[Channels and consent]]
+* xref:glossary:index.adoc[menu:Glossary[]]
+* link:{url-api-docs}[menu:Reference[API reference]^]
+* link:{url-sdk-docs}[menu:Reference[SDK reference]^]

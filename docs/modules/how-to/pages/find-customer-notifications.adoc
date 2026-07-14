@@ -1,0 +1,31 @@
+= Find a customer’s notifications
+:description: How to list Notification Hub send records for one recipient.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when you need recent send {gt-record} entries for one {gt-recipient}.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* The Recipient identifier
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== List records with filters
+
+Filter by `recipient` and optionally by `status`.
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=records-list]
+
+== When to use this
+
+* Confirm which sends reached a Recipient after a campaign or support request.
+* Filter by status (for example `delivered` or `failed`) to narrow the list.
+
+== Related
+
+* xref:how-to:check-delivery-status.adoc[menu:How-to[Check delivery status]]
+* xref:how-to:send-notification.adoc[menu:How-to[Send a notification]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

@@ -1,0 +1,36 @@
+= Send a notification
+:description: How to send a Notification Hub notification when template and preferences are ready.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when you already have a {gt-template} and {gt-preferences}, and want to complete a send.
+A successful send returns a delivery {gt-record} (`recordId`) you can use for status checks.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* {gt-recipient}, {gt-channel} (`email`, `sms`, or `push`), and an existing template id
+* Preferences that allow that channel for the Recipient: xref:how-to:set-preferences.adoc[menu:How-to[Set preferences]]
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+include::ROOT:partial$mock-service-note.adoc[]
+
+== Limitations
+
+* Keep successful sends to **10** or fewer in any **60**-second window.
+* Match the send channel to both the template channel and an allowed preference.
+
+== Send the notification
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=send]
+
+On success you receive a demo `recordId`.
+Use it in xref:how-to:check-delivery-status.adoc[menu:How-to[Check delivery status]].
+
+== Related
+
+* link:{url-sdk-docs}[menu:Reference[SDK reference]^]
+* xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

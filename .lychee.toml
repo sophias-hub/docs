@@ -10,4 +10,9 @@ exclude_path = [
 exclude = [
   '^http://localhost',
   '^https://localhost',
+  '^https://unpkg.com/',
+  '^https://cdn.jsdelivr.net/',
+  '^https://proxy.scalar.com/',
+  # Present locally; remote 404 until CHANGELOG merges to main.
+  '^https://github.com/sophias-hub/notification-hub-service/blob/.*/CHANGELOG',
 ]

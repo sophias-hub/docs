@@ -1,0 +1,2 @@
+// Module navigation list. ROOT includes this via explanation:partial$nav.adoc.
+include::partial$nav.adoc[]

@@ -1,0 +1,46 @@
+= Channels and consent
+:description: Explain email, SMS, and push preferences and how consent gates sends.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Notification Hub models three channels—email, SMS, and push—and stores {gt-preferences} per {gt-recipient}.
+Preferences answer: “May we contact this person on this channel?”
+
+== How consent gates a send
+
+A send proceeds only when the {gt-template}’s {gt-channel} is allowed for that Recipient.
+
+[mermaid]
+....
+flowchart TD
+  Send["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;sends a notification"] --> Match{"🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;template channel allowed?"}
+  Match -->|Yes| Ok["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;accepts send and creates `recordId`"]
+  Match -->|No| Block["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;blocks the send"]
+....
+
+== Demo defaults before preferences exist
+
+[IMPORTANT]
+====
+Until you set preferences, the demo treats all channels as *allowed*.
+That keeps first-time sends simple. Production products usually start from explicit consent; this mock doesn't.
+====
+
+== How preferences work
+
+* A preference of `true` allows sends on that channel.
+* A preference of `false` blocks sends on that channel.
+* Templates are channel-specific—match the template’s channel to an allowed preference.
+
+== Limitations for a successful send
+
+* Keep the channel preference at `true` for every channel you intend to send on.
+* After an opt-out (xref:how-to:unsubscribe.adoc[menu:How-to[Unsubscribe from a channel]]), restore allow with xref:how-to:set-preferences.adoc[menu:How-to[Set preferences]] before sending on that channel again.
+
+== Related
+
+* xref:glossary:index.adoc[menu:Glossary[]]
+* xref:how-to:set-preferences.adoc[menu:How-to[Set preferences]]
+* xref:how-to:unsubscribe.adoc[menu:How-to[Unsubscribe from a channel]]
+* xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]]

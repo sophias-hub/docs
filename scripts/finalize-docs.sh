@@ -13,6 +13,5 @@ if [[ ! -d "$SITE_DIR" ]]; then
 fi
 
 bash scripts/generate-docs-meta.sh "${SITE_DIR}/meta.json"
-node scripts/inject-provenance-banner.mjs "${SITE_DIR}" "Docs hub"
 
-echo "Docs hub finalized with provenance metadata and banner."
+echo "Docs hub finalized (meta written to ${SITE_DIR}/meta.json)."

@@ -1,0 +1,36 @@
+= Check delivery status
+:description: How to look up a Notification Hub delivery record by recordId.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when you have a `recordId` from a successful send and need to see the {gt-delivery-status}.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* A `recordId` from a successful send
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Look up one record
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=records-get]
+
+Statuses in the demo include `accepted`, `queued`, `delivered`, and `failed`.
+
+[NOTE]
+====
+Tracking uses a {gt-record} / `recordId`, not a “message id.”
+====
+
+== Other ways to observe delivery
+
+* List records for one {gt-recipient}: xref:how-to:find-customer-notifications.adoc[menu:How-to[Find a customer’s notifications]]
+* Receive delivery events on a {gt-webhook}: xref:how-to:register-webhook.adoc[menu:How-to[Register a webhook]]
+
+== Related
+
+* xref:how-to:find-customer-notifications.adoc[menu:How-to[Find a customer’s notifications]]
+* xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

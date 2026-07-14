@@ -1,0 +1,4 @@
+* Explanation
+** xref:explanation:what-is-notification-hub.adoc[Notification Hub overview]
+** xref:explanation:delivery-lifecycle.adoc[Delivery lifecycle]
+** xref:explanation:channels-and-consent.adoc[Channels and consent]

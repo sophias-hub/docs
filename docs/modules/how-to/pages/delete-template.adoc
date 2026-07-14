@@ -1,0 +1,29 @@
+= Delete a template
+:description: How to remove a template from the Notification Hub catalog.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when a {gt-template} should no longer be available for sends.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* The template `id`
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Limitations
+
+* Delete a template only when no recent send {gt-record} still references it.
+
+== Delete the template
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=templates-delete]
+
+Success returns **204**.
+
+== Related
+
+* xref:how-to:check-delivery-status.adoc[menu:How-to[Check delivery status]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

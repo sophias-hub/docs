@@ -1,0 +1,16 @@
+* How-to
+** xref:how-to:authentication.adoc[Connect with an API key]
+** Templates
+*** xref:how-to:create-template.adoc[Create a template]
+*** xref:how-to:retrieve-template.adoc[Retrieve a template]
+*** xref:how-to:update-template.adoc[Update a template]
+*** xref:how-to:delete-template.adoc[Delete a template]
+** Preferences
+*** xref:how-to:set-preferences.adoc[Set preferences]
+*** xref:how-to:unsubscribe.adoc[Unsubscribe from a channel]
+** Send and track
+*** xref:how-to:send-notification.adoc[Send a notification]
+*** xref:how-to:check-delivery-status.adoc[Check delivery status]
+*** xref:how-to:find-customer-notifications.adoc[Find a customer’s notifications]
+** Webhooks
+*** xref:how-to:register-webhook.adoc[Register a webhook]

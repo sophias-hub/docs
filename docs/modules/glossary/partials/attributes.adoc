@@ -1,0 +1,26 @@
+// Glossary term definitions (single source of truth).
+// Include once per page: include::glossary:partial$attributes.adoc[]
+// Then mark terms inline with short particles: {gt-sender}, {gt-template}, …
+// (Particles expand to hoverable <abbr> using the definitions below.)
+
+:glossary-def-sender: The application that authenticates to Notification Hub, manages templates and preferences, sends notifications, looks up delivery records, and receives webhooks.
+:glossary-def-recipient: The person Notification Hub notifies on a channel (email, SMS, or push).
+:glossary-def-notification-hub: The notification dispatch service that stores templates and preferences, accepts sends, creates delivery records, and optionally delivers webhook events.
+:glossary-def-template: A reusable message definition with a stable id, a name, and a single channel (email, SMS, or push).
+:glossary-def-preferences: Per-Recipient flags that allow or block each channel. true allows sends; false blocks them.
+:glossary-def-channel: A delivery path Notification Hub supports: email, SMS, or push.
+:glossary-def-record: The delivery tracking object returned when a send is accepted. Look up status by recordId.
+:glossary-def-delivery-status: Demo lifecycle values on a record: accepted, queued, delivered, or failed.
+:glossary-def-webhook: A callback URL the Sender registers so Notification Hub can post delivery events.
+:glossary-def-api-key: The header value a Sender sends to authenticate business operations (X-API-Key).
+
+:gt-sender: pass:a[<abbr class="glossary-term" title="{glossary-def-sender}">Sender</abbr>]
+:gt-recipient: pass:a[<abbr class="glossary-term" title="{glossary-def-recipient}">Recipient</abbr>]
+:gt-notification-hub: pass:a[<abbr class="glossary-term" title="{glossary-def-notification-hub}">Notification Hub</abbr>]
+:gt-template: pass:a[<abbr class="glossary-term" title="{glossary-def-template}">template</abbr>]
+:gt-preferences: pass:a[<abbr class="glossary-term" title="{glossary-def-preferences}">preferences</abbr>]
+:gt-channel: pass:a[<abbr class="glossary-term" title="{glossary-def-channel}">channel</abbr>]
+:gt-record: pass:a[<abbr class="glossary-term" title="{glossary-def-record}">record</abbr>]
+:gt-delivery-status: pass:a[<abbr class="glossary-term" title="{glossary-def-delivery-status}">delivery status</abbr>]
+:gt-webhook: pass:a[<abbr class="glossary-term" title="{glossary-def-webhook}">webhook</abbr>]
+:gt-api-key: pass:a[<abbr class="glossary-term" title="{glossary-def-api-key}">API key</abbr>]

@@ -1,0 +1,12 @@
+// Canonical external URLs (defined as playbook attributes in antora-playbook.yml).
+// Bare URLs here keep Lychee coverage when pages use {url-*} attributes.
+// Lychee-only catalog: pages use playbook `{url-*}` attributes instead of including this file.
+
+https://sophias-hub.github.io/docs-api/
+https://sophias-hub.github.io/docs-sdk/
+https://sophias-hub.github.io/docs-sdk/typescript/
+https://sophias-hub.github.io/docs-sdk/java/
+https://sophias-hub.github.io/docs-sdk/python/
+https://github.com/sophias-hub/notification-hub-service
+https://github.com/sophias-hub/notification-hub-service/blob/main/CHANGELOG.md
+https://github.com/sophias-hub/notification-hub-service/releases

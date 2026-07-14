@@ -1,0 +1,7 @@
+// include::partial$mock-service-note.adoc[]
+
+[IMPORTANT]
+====
+This Notification Hub is a *mock*.
+It accepts the same kinds of requests a real notification service would, but it doesn't deliver real email, SMS, or push messages.
+====

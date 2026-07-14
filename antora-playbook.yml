@@ -9,6 +9,28 @@ content:
       branches: HEAD
       start_path: docs
 
+antora:
+  extensions:
+    # Colors aligned with docs-sdk Java modern-theme (teal) + hub favicon (navy/teal).
+    - require: '@sntke/antora-mermaid-extension'
+      mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs
+      script_stem: header-scripts
+      mermaid_initialize_options_raw_text_override: '(function(){const dark=document.documentElement.classList.contains("dark-theme");const light={primaryColor:"#ccfbf1",primaryTextColor:"#134e4a",primaryBorderColor:"#0d9488",secondaryColor:"#dbeafe",secondaryTextColor:"#1e3a5f",secondaryBorderColor:"#1e3a5f",tertiaryColor:"#fef3c7",tertiaryTextColor:"#92400e",tertiaryBorderColor:"#e18114",lineColor:"#475569",textColor:"#0f172a",mainBkg:"#ccfbf1",nodeBorder:"#0d9488",clusterBkg:"#f1f5f9",clusterBorder:"#94a3b8",titleColor:"#0f172a",edgeLabelBackground:"#ffffff",actorBkg:"#dbeafe",actorBorder:"#1e3a5f",actorTextColor:"#1e3a5f",actorLineColor:"#475569",signalColor:"#475569",signalTextColor:"#0f172a",labelBoxBkgColor:"#dbeafe",labelBoxBorderColor:"#1e3a5f",labelTextColor:"#1e3a5f",loopTextColor:"#0f172a",noteBkgColor:"#e8f1fc",noteTextColor:"#0f172a",noteBorderColor:"#217ee7",activationBkgColor:"#99f6e4",activationBorderColor:"#0d9488",sequenceNumberColor:"#ffffff",fontFamily:"Source Sans 3, system-ui, sans-serif"};const night={primaryColor:"#134e4a",primaryTextColor:"#ccfbf1",primaryBorderColor:"#5eead4",secondaryColor:"#1e3a5f",secondaryTextColor:"#dbeafe",secondaryBorderColor:"#74c0fc",tertiaryColor:"#78350f",tertiaryTextColor:"#fde68a",tertiaryBorderColor:"#ffa726",lineColor:"#909296",textColor:"#f1f3f5",mainBkg:"#134e4a",nodeBorder:"#5eead4",clusterBkg:"#1f2125",clusterBorder:"#373a40",titleColor:"#f1f3f5",edgeLabelBackground:"#25262b",actorBkg:"#1e3a5f",actorBorder:"#74c0fc",actorTextColor:"#dbeafe",actorLineColor:"#909296",signalColor:"#909296",signalTextColor:"#f1f3f5",labelBoxBkgColor:"#1e3a5f",labelBoxBorderColor:"#74c0fc",labelTextColor:"#dbeafe",loopTextColor:"#f1f3f5",noteBkgColor:"#1a1a2a",noteTextColor:"#dbeafe",noteBorderColor:"#4dabf7",activationBkgColor:"#0f766e",activationBorderColor:"#5eead4",sequenceNumberColor:"#0f172a",fontFamily:"Source Sans 3, system-ui, sans-serif"};return{startOnLoad:true,securityLevel:"loose",theme:"base",themeVariables:dark?night:light};})()'
+
+asciidoc:
+  attributes:
+    experimental: ''
+    url-api-docs: https://sophias-hub.github.io/docs-api/
+    url-sdk-docs: https://sophias-hub.github.io/docs-sdk/
+    url-sdk-typescript: https://sophias-hub.github.io/docs-sdk/typescript/
+    url-sdk-java: https://sophias-hub.github.io/docs-sdk/java/
+    url-sdk-python: https://sophias-hub.github.io/docs-sdk/python/
+    url-service-repo: https://github.com/sophias-hub/notification-hub-service
+    url-service-changelog: https://github.com/sophias-hub/notification-hub-service/blob/main/CHANGELOG.md
+    url-service-releases: https://github.com/sophias-hub/notification-hub-service/releases
+  extensions:
+    - '@asciidoctor/tabs'
+
 ui:
   bundle:
     url: https://github.com/antora-supplemental/valentus-theme/releases/download/v1/ui-bundle.zip

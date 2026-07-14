@@ -1,0 +1,35 @@
+= SDK reference
+:description: Pointer to the separate Notification Hub TypeScript, Java, and Python SDK docs.
+
+Language clients for Notification Hub are documented on a separate SDK site.
+Open that site when you need install steps, usage, and method docs for TypeScript, Java, or Python.
+
+== Open the SDK docs
+
+{url-sdk-docs}[SDK reference^]
+
+That link opens in a new tab.
+
+[tabs]
+====
+TypeScript::
++
+--
+{url-sdk-typescript}[TypeScript SDK^]
+--
+Java::
++
+--
+{url-sdk-java}[Java SDK^]
+--
+Python::
++
+--
+{url-sdk-python}[Python SDK^]
+--
+====
+
+== Related
+
+* xref:ROOT:index.adoc[menu:Start[Start here]]
+* link:{url-api-docs}[menu:Reference[API reference]^]

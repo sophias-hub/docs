@@ -1,0 +1,6 @@
+// Shared demo defaults for Notification Hub hub pages.
+// include::partial$demo-defaults.adoc[]
+
+* Local service (when running the mock yourself): `http://localhost:3000`
+* Auth header: `X-API-Key`
+* Try-out key for this docs UI: `secure-token-123`

@@ -1,0 +1,25 @@
+---
+description: Diátaxis + Antora writing standards for the docs hub
+globs: "**/*.{adoc,yml,yaml,md}"
+alwaysApply: true
+---
+
+# Docs hub writing rules
+
+Follow [AGENTS.md](../../AGENTS.md) for policy.  
+Author pages with **`write-docs`**.  
+Create or update Mermaid visuals with **`write-diagrams`**.  
+Check quality with **`validate-and-fix`**.
+
+## Essentials
+
+- One common audience; plain language first; use cases / examples for “why it matters.”
+- Structure for scannability: one focus per page, explanatory section titles, short paragraphs/lists/diagrams, full sentences outside lists (see AGENTS.md **Page structure and scannability**).
+- Modules: `ROOT`, `tutorials`, `how-to`, `explanation`, `reference`, `glossary`. ROOT `nav.adoc` includes each module’s `partials/nav.adoc`.
+- Glossary: defs in `glossary:partial$attributes.adoc`; pages use `pass:a[<abbr … title="{glossary-def-*}">…]`; page at `glossary:index.adoc`.
+- Error response detail lives on `{url-api-docs}` (no hub error catalog).
+- Off-hub links: playbook `{url-*}` attributes + trailing `^`. In-hub: `xref:module:page.adoc[]`.
+- Endpoints in tutorials/how-tos via `ROOT:partial$rapi-doc-mini`.
+- Behavior changes update **explanation** pages and related **diagrams**.
+- Work **locally only**; commit/push/PR only when asked.
+- Run `npm run validate` (and `docs:build` when practical) before declaring done.

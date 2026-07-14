@@ -1,0 +1,7 @@
+// include::partial$try-out-key-note.adoc[]
+
+[TIP]
+====
+Interactive API rows in these guides are prefilled with our *try-out key* `secure-token-123` (`X-API-Key`).
+Use that key when you try a request from the docs.
+====

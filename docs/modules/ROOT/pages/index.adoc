@@ -1,19 +1,34 @@
 = Notification Hub documentation
+:description: Start here to learn Notification Hub guides. API and SDK detail live on separate sites.
 
-Welcome. This site is the documentation hub for the Notification Hub portfolio project.
+include::glossary:partial$attributes.adoc[]
 
-== What you can do here
+These guides help a {gt-sender} use {gt-notification-hub} to notify a {gt-recipient}.
+Start with the overview, complete one end-to-end send, then reuse how-tos as needed.
+Hover a dotted term for a short definition, or open the xref:glossary:index.adoc[menu:Glossary[]].
 
-* Follow a tutorial to send your first notification.
-* Use task-oriented how-tos for common integration steps.
-* Jump to reference docs for the API (OpenAPI/Swagger UI) and SDK (TypeDoc).
+include::partial$mock-service-note.adoc[]
 
-== Quick links
+== Recommended learning order
 
-* xref:tutorials/first-notification.adoc[Send your first notification]
-* xref:how-to/authentication.adoc[Authenticate requests]
-* API reference (Swagger UI): https://sophias-hub.github.io/docs-api/
-* SDK reference (TypeDoc): https://sophias-hub.github.io/docs-sdk/
-* xref:reference/api.adoc[API reference (hub page)]
-* xref:reference/sdk.adoc[SDK reference (hub page)]
+. Learn the product: xref:explanation:what-is-notification-hub.adoc[menu:Explanation[Notification Hub overview]]
+. Complete one end-to-end success: xref:tutorials:first-notification.adoc[menu:Tutorials[Create&#44; prefer&#44; and send]]
+. Reuse task pages as needed: xref:how-to:authentication.adoc[menu:How-to[Connect with an API key]] · xref:how-to:create-template.adoc[menu:How-to[Create a template]] · xref:how-to:send-notification.adoc[menu:How-to[Send a notification]]
 
+== Example paths
+
+* Understand consent before a campaign: xref:explanation:channels-and-consent.adoc[menu:Explanation[Channels and consent]] → xref:how-to:set-preferences.adoc[menu:How-to[Set preferences]]
+* Track a send after it's accepted: xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]] → xref:how-to:check-delivery-status.adoc[menu:How-to[Check delivery status]]
+* Read field-level contracts: link:{url-api-docs}[menu:Reference[API reference]^]
+* Use a client library: link:{url-sdk-docs}[menu:Reference[SDK reference]^]
+
+== Related
+
+* xref:glossary:index.adoc[menu:Glossary[]]
+* xref:explanation:what-is-notification-hub.adoc[menu:Explanation[Notification Hub overview]]
+* xref:how-to:set-preferences.adoc[menu:How-to[Set preferences]]
+* xref:how-to:unsubscribe.adoc[menu:How-to[Unsubscribe from a channel]]
+* xref:how-to:check-delivery-status.adoc[menu:How-to[Check delivery status]]
+* xref:how-to:find-customer-notifications.adoc[menu:How-to[Find a customer’s notifications]]
+* link:{url-service-changelog}[menu:Reference[Service changelog]^]
+* link:{url-service-releases}[menu:Reference[GitHub Releases]^]

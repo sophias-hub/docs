@@ -1,0 +1,34 @@
+/* AsciiDoc IDE preview — admonition backgrounds by type.
+ * Avoid overflow:hidden so the floating label badge is not cropped. */
+.admonitionblock {
+  margin-top: 1.75rem !important;
+}
+
+.admonitionblock td.content {
+  border-radius: 0.5rem;
+}
+
+.admonitionblock.note td.content {
+  background: #e8f1fc !important;
+  border-left: 4px solid #217ee7;
+}
+
+.admonitionblock.tip td.content {
+  background: #e8f6e9 !important;
+  border-left: 4px solid #41af46;
+}
+
+.admonitionblock.important td.content {
+  background: #fdecea !important;
+  border-left: 4px solid #d32f2f;
+}
+
+.admonitionblock.warning td.content {
+  background: #fff3e0 !important;
+  border-left: 4px solid #e18114;
+}
+
+.admonitionblock.caution td.content {
+  background: #f3e5f5 !important;
+  border-left: 4px solid #a0439c;
+}

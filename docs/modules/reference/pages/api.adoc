@@ -1,0 +1,19 @@
+= API reference
+:description: Pointer to the separate Notification Hub OpenAPI / Swagger site.
+
+The full HTTP contract for Notification Hub—including schemas and interactive try-it-out—is published on a separate site.
+Open that site when you need field-level detail, status payloads, or to exercise operations against the mock API.
+
+== Open the API docs
+
+{url-api-docs}[API reference^]
+
+That link opens in a new tab.
+
+== Related
+
+* xref:how-to:authentication.adoc[menu:How-to[Connect with an API key]]
+* xref:how-to:send-notification.adoc[menu:How-to[Send a notification]]
+* xref:tutorials:first-notification.adoc[menu:Tutorials[Create&#44; prefer&#44; and send]]
+* xref:explanation:what-is-notification-hub.adoc[menu:Explanation[Notification Hub overview]]
+* xref:glossary:index.adoc[menu:Glossary[]]

@@ -6,3 +6,152 @@
 .adt-breadcrumbs > ul > .adt-breadcrumb-edit {
   margin-left: auto;
 }
+
+/* Brand header mark */
+.adt-header-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/*
+ * Admonition backgrounds by type.
+ * Do not set overflow:hidden on the table — the UI floats the label
+ * above the box (translateY -50%), and overflow clips that badge.
+ */
+.doc .admonitionblock {
+  margin-top: 1.75rem;
+}
+
+.doc .admonitionblock td.content {
+  border-radius: 0.5rem;
+}
+
+.doc .admonitionblock.note td.content {
+  background: #e8f1fc;
+  border-left: 4px solid #217ee7;
+}
+
+.doc .admonitionblock.tip td.content {
+  background: #e8f6e9;
+  border-left: 4px solid #41af46;
+}
+
+.doc .admonitionblock.important td.content {
+  background: #fdecea;
+  border-left: 4px solid #d32f2f;
+}
+
+.doc .admonitionblock.warning td.content {
+  background: #fff3e0;
+  border-left: 4px solid #e18114;
+}
+
+.doc .admonitionblock.caution td.content {
+  background: #f3e5f5;
+  border-left: 4px solid #a0439c;
+}
+
+/* Admonition backgrounds by type (dark) */
+html.dark-theme .doc .admonitionblock.note td.content {
+  background: rgba(33, 126, 231, 0.18);
+  border-left-color: #5b9ef0;
+}
+
+html.dark-theme .doc .admonitionblock.tip td.content {
+  background: rgba(65, 175, 70, 0.18);
+  border-left-color: #6bc46f;
+}
+
+html.dark-theme .doc .admonitionblock.important td.content {
+  background: rgba(211, 47, 47, 0.2);
+  border-left-color: #ef5350;
+}
+
+html.dark-theme .doc .admonitionblock.warning td.content {
+  background: rgba(225, 129, 20, 0.2);
+  border-left-color: #ffa726;
+}
+
+html.dark-theme .doc .admonitionblock.caution td.content {
+  background: rgba(160, 67, 156, 0.2);
+  border-left-color: #ce93d8;
+}
+
+/* Inline Mermaid diagrams — container chrome */
+.doc .mermaid {
+  margin: 1.25rem 0;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.65rem;
+}
+
+.doc .mermaid svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+html.dark-theme .doc .mermaid {
+  background: #1f2125;
+  border-color: #373a40;
+}
+
+/* Legacy inline-SVG wrapper (if any remain) */
+.doc .diagram-svg {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.doc .diagram-svg svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* Glossary hover terms: label in text, definition in popup */
+.doc abbr.glossary-term {
+  position: relative;
+  text-decoration: underline dotted;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+
+.doc abbr.glossary-term:hover::after,
+.doc abbr.glossary-term:focus-visible::after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 0.35rem);
+  z-index: 20;
+  width: max-content;
+  max-width: min(22rem, 70vw);
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.35rem;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 1.35;
+  text-decoration: none;
+  white-space: normal;
+  box-shadow: 0 0.35rem 1rem rgb(15 23 42 / 25%);
+  pointer-events: none;
+}
+
+html.dark-theme .doc abbr.glossary-term {
+  text-decoration-color: #94a3b8;
+}
+
+html.dark-theme .doc abbr.glossary-term:hover::after,
+html.dark-theme .doc abbr.glossary-term:focus-visible::after {
+  background: #f1f5f9;
+  color: #0f172a;
+  box-shadow: 0 0.35rem 1rem rgb(0 0 0 / 45%);
+}

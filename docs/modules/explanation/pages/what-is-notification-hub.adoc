@@ -1,0 +1,73 @@
+= Notification Hub overview
+:description: Plain-language explanation of what Notification Hub does and how the pieces fit together.
+
+include::glossary:partial$attributes.adoc[]
+
+{gt-notification-hub} is the product these guides describe.
+A {gt-sender} calls it when it needs to notify a {gt-recipient}, for example after signup, for a one-time password, or when a payment succeeds.
+Hover a dotted term for a short definition, or open the xref:glossary:index.adoc[menu:Glossary[]].
+
+include::ROOT:partial$mock-service-note.adoc[]
+
+== How the pieces connect
+
+A Sender calls Notification Hub with a {gt-template} and {gt-preferences}, sends on a {gt-channel}, and gets back a delivery {gt-record}.
+
+[mermaid]
+....
+flowchart LR
+  App["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;calls the API with `X-API-Key`"] --> Hub["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;resolves `template` and preferences"]
+  Hub --> Send["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;accepts the send"]
+  Send --> Rec["🔔 &lt;b&gt;Notification Hub&lt;/b&gt;&lt;br/&gt;creates delivery `record`"]
+  Rec --> Ch["📡 &lt;b&gt;Channel&lt;/b&gt;&lt;br/&gt;email / SMS / push"]
+  Rec -.-> Wh["📱 &lt;b&gt;Sender&lt;/b&gt;&lt;br/&gt;receives delivery events via webhook"]
+....
+
+== What Notification Hub owns
+
+* Holds a catalog of templates (reusable message definitions) you can create, retrieve, update, and delete
+* Stores channel preferences (email, SMS, push) and honors opt-outs
+* Accepts authenticated **send** requests (who, which channel, which template)
+* Returns a record / `recordId` so Senders can look up demo {gt-delivery-status}
+* Supports a {gt-webhook} so the same Sender can observe delivery events
+* Exposes **health** checks for hosting platforms
+
+== Channels you can send on
+
+|===
+| Channel | Example moment | Typical use
+
+| Email
+| Welcome message
+| Onboarding and account mail
+
+| SMS
+| One-time password
+| Verification and security codes
+
+| Push
+| Payment success
+| In-app alerts for completed actions
+|===
+
+Templates are channel-specific.
+Preferences decide whether a Recipient may receive that channel.
+See xref:explanation:channels-and-consent.adoc[menu:Explanation[Channels and consent]].
+
+== Conceptual send steps
+
+. Sender authenticates with an {gt-api-key}.
+. Sender creates or retrieves a template.
+. Sender ensures the Recipient allows the channel.
+. Sender sends: Recipient + channel + template (optional data).
+. Notification Hub validates the request (including consent) and returns a `recordId`.
+
+More detail: xref:explanation:delivery-lifecycle.adoc[menu:Explanation[Delivery lifecycle]].
+
+== Related
+
+* xref:glossary:index.adoc[menu:Glossary[]]
+* xref:tutorials:first-notification.adoc[menu:Tutorials[Create&#44; prefer&#44; and send]]
+* xref:how-to:authentication.adoc[menu:How-to[Connect with an API key]]
+* link:{url-api-docs}[menu:Reference[API reference]^]
+* link:{url-sdk-docs}[menu:Reference[SDK reference]^]

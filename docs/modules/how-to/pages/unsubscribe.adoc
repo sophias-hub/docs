@@ -1,0 +1,33 @@
+= Unsubscribe from a channel
+:description: How to opt a recipient out of one Notification Hub channel.
+
+
+include::glossary:partial$attributes.adoc[]
+
+Use this how-to when a {gt-recipient} should stop receiving **one** {gt-channel} without rewriting {gt-preferences} by hand.
+
+== What you need
+
+* A valid `X-API-Key` (try-out key is prefilled)
+* Recipient and channel (`email`, `sms`, or `push`)
+
+include::ROOT:partial$try-out-key-note.adoc[]
+
+== Limitations
+
+* After opt-out, that channel stays blocked for sends until preferences allow it again.
+
+== Opt out of one channel
+
+include::ROOT:partial$rapi-doc-mini.adoc[tag=unsubscribe]
+
+The response shows the updated preferences with that channel set to `false`.
+
+== Verify success
+
+Confirm the response lists the opted-out channel as `false`.
+
+== Related
+
+* xref:how-to:set-preferences.adoc[menu:How-to[Set preferences]]
+* xref:explanation:channels-and-consent.adoc[menu:Explanation[Channels and consent]]

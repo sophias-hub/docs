@@ -4,14 +4,18 @@
   "type": "module",
   "scripts": {
     "docs:build": "antora antora-playbook.yml && bash scripts/finalize-docs.sh",
+    "docs:serve": "npx --yes serve build/site",
     "validate": "bash scripts/validate.sh"
   },
   "scriptsComments": {
-    "docs:build": "Build the Antora hub into build/site/ and inject provenance banner",
+    "docs:build": "Build the Antora hub into build/site/ and write build meta.json",
+    "docs:serve": "Serve the local Antora build at build/site (run docs:build first)",
     "validate": "Lint AsciiDoc prose (Vale) and check links (Lychee)"
   },
   "devDependencies": {
     "@antora/cli": "^3.1.10",
-    "@antora/site-generator-default": "^3.1.10"
+    "@antora/site-generator-default": "^3.1.10",
+    "@asciidoctor/tabs": "^1.0.0-beta.6",
+    "@sntke/antora-mermaid-extension": "^0.0.13"
   }
 }
